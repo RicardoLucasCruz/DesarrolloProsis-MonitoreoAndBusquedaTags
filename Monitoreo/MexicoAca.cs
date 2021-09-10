@@ -303,6 +303,14 @@ namespace Monitoreo
                 {
                     e.CellStyle.BackColor = Color.OrangeRed;
                 }
+                else if (e.Value.ToString().Contains("No se encontro la ruta"))
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
+                else if (e.Value.ToString().Contains("No hay lista"))
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
             }
             else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "webServiceDGV")//Si es la columna a evaluar
             {

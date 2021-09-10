@@ -809,7 +809,7 @@ namespace Monitoreo
 
                 try
                 {
-                    SqlConnection conn = new SqlConnection($"Data Source=DESKTOP-E3A0097\\MSSQLSERVER01;Initial Catalog=ProsisDBv1_1;Integrated Security=True");
+                    SqlConnection conn = new SqlConnection($"Data Source={IP},1433;Network Library=DBMSSOCN;Initial Catalog=ProsisDBv1_1;User ID=sa;Password=CAPUFE;");
                     conn.Open();
 
                     SqlCommand cmd = new SqlCommand();
