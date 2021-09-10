@@ -142,11 +142,13 @@ namespace Monitoreo
 
         public void PrincipalF(bool Tepozotlan,bool Jorobas,bool Polotitlan, bool Palmillas, bool Chichemequillas, bool Queretaro, bool Libramiento, bool VillaGrande, bool CerroGordo, bool Salamanca)
         {
+            GetFlags();
+
             //LSTABINTyWS******************************************************
             if (Tepozotlan == true)
             {
                 //Tepozotlan
-                var TPappSettings = ConfigurationManager.AppSettings["TepozotlanIP"];
+                var TPappSettings = ConfigurationManager.AppSettings["Laboratorio"];
                 TepozotlanLS = getLSTABINT(TPappSettings, B_TP_Serv, B_LSTABINT_TP);
 
                 if (StatusConectionChange == true)
@@ -386,7 +388,7 @@ namespace Monitoreo
             if (Queretaro == true)
             {
                 //Queretaro
-                var QappSettings = ConfigurationManager.AppSettings["Laboratorio"];
+                var QappSettings = ConfigurationManager.AppSettings["QueretaroIP"];
                 QueretaroLS = getLSTABINT(QappSettings, B_Qro_Serv, B_LSTABINT_Qro);
 
                 if (StatusConectionChange == true)
@@ -905,9 +907,9 @@ namespace Monitoreo
         /// </summary>
         public void GetFlags()
         {
-            var appSettings = ConfigurationManager.AppSettings;
+            string conexion = Convert.ToString(ConfigurationManager.ConnectionStrings["string1"]);
 
-            List<Flag> flags = getBanderas.GetAll(appSettings["string1"]);
+            List<Flag> flags = getBanderas.GetAll(conexion);
 
             //Conexion banderas
             foreach (var item in flags)

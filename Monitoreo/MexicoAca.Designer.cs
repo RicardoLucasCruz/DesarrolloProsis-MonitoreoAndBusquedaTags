@@ -37,8 +37,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.btnList = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnList = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.btnLimpiar2 = new System.Windows.Forms.Button();
@@ -57,7 +57,6 @@
             this.AlpuyecaCB = new System.Windows.Forms.CheckBox();
             this.tableLayoutPanel5 = new System.Windows.Forms.TableLayoutPanel();
             this.label2 = new System.Windows.Forms.Label();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.plazaDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstabintDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -109,13 +108,11 @@
             this.tableLayoutPanel4.BackColor = System.Drawing.Color.Transparent;
             this.tableLayoutPanel4.ColumnCount = 1;
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Controls.Add(this.btnSalir, 0, 1);
-            this.tableLayoutPanel4.Controls.Add(this.btnList, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.btnSalir, 0, 0);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(982, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
-            this.tableLayoutPanel4.RowCount = 2;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 37F));
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
+            this.tableLayoutPanel4.RowCount = 1;
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(305, 72);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
@@ -124,28 +121,14 @@
             this.btnSalir.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnSalir.BackColor = System.Drawing.Color.AliceBlue;
             this.btnSalir.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Location = new System.Drawing.Point(3, 39);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSalir.Location = new System.Drawing.Point(3, 20);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(299, 31);
             this.btnSalir.TabIndex = 12;
             this.btnSalir.Text = "Cerrar aplicacion";
             this.btnSalir.UseVisualStyleBackColor = false;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
-            // 
-            // btnList
-            // 
-            this.btnList.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnList.BackColor = System.Drawing.Color.AliceBlue;
-            this.btnList.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnList.Location = new System.Drawing.Point(3, 2);
-            this.btnList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.btnList.Name = "btnList";
-            this.btnList.Size = new System.Drawing.Size(299, 33);
-            this.btnList.TabIndex = 9;
-            this.btnList.Text = "Ir a Mexico-Irapuato";
-            this.btnList.UseVisualStyleBackColor = false;
-            this.btnList.Click += new System.EventHandler(this.btnList_Click);
             // 
             // pictureBox1
             // 
@@ -157,6 +140,20 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
+            // btnList
+            // 
+            this.btnList.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btnList.BackColor = System.Drawing.Color.AliceBlue;
+            this.btnList.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnList.Location = new System.Drawing.Point(985, 3);
+            this.btnList.Margin = new System.Windows.Forms.Padding(2);
+            this.btnList.Name = "btnList";
+            this.btnList.Size = new System.Drawing.Size(299, 33);
+            this.btnList.TabIndex = 9;
+            this.btnList.Text = "Ir a Mexico-Irapuato";
+            this.btnList.UseVisualStyleBackColor = false;
+            this.btnList.Click += new System.EventHandler(this.btnList_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -165,9 +162,9 @@
             this.panel1.Controls.Add(this.btnActualizar);
             this.panel1.Controls.Add(this.btnAceptar2);
             this.panel1.Controls.Add(this.tableLayoutPanel2);
-            this.panel1.Location = new System.Drawing.Point(986, 104);
+            this.panel1.Location = new System.Drawing.Point(986, 150);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(321, 542);
+            this.panel1.Size = new System.Drawing.Size(321, 497);
             this.panel1.TabIndex = 15;
             // 
             // label1
@@ -175,7 +172,7 @@
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(9, 19);
+            this.label1.Location = new System.Drawing.Point(16, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(294, 18);
             this.label1.TabIndex = 0;
@@ -186,8 +183,8 @@
             this.btnLimpiar2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnLimpiar2.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLimpiar2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar2.Location = new System.Drawing.Point(11, 487);
-            this.btnLimpiar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnLimpiar2.Location = new System.Drawing.Point(11, 464);
+            this.btnLimpiar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar2.Name = "btnLimpiar2";
             this.btnLimpiar2.Size = new System.Drawing.Size(299, 34);
             this.btnLimpiar2.TabIndex = 12;
@@ -200,8 +197,8 @@
             this.btnActualizar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnActualizar.BackColor = System.Drawing.Color.Silver;
             this.btnActualizar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizar.Location = new System.Drawing.Point(-1, 553);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnActualizar.Location = new System.Drawing.Point(-1, 530);
+            this.btnActualizar.Margin = new System.Windows.Forms.Padding(2);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(314, 27);
             this.btnActualizar.TabIndex = 11;
@@ -213,8 +210,8 @@
             this.btnAceptar2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAceptar2.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAceptar2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar2.Location = new System.Drawing.Point(11, 449);
-            this.btnAceptar2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnAceptar2.Location = new System.Drawing.Point(11, 426);
+            this.btnAceptar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar2.Name = "btnAceptar2";
             this.btnAceptar2.Size = new System.Drawing.Size(299, 34);
             this.btnAceptar2.TabIndex = 10;
@@ -238,7 +235,7 @@
             this.tableLayoutPanel2.Controls.Add(this.LaVentaCB, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.AlpuyecaCB, 0, 0);
             this.tableLayoutPanel2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(9, 55);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(9, 32);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 10;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
@@ -357,15 +354,17 @@
             // tableLayoutPanel5
             // 
             this.tableLayoutPanel5.BackColor = System.Drawing.Color.White;
-            this.tableLayoutPanel5.ColumnCount = 1;
+            this.tableLayoutPanel5.ColumnCount = 2;
+            this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 974F));
             this.tableLayoutPanel5.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel5.Controls.Add(this.label2, 0, 0);
+            this.tableLayoutPanel5.Controls.Add(this.btnList, 1, 0);
             this.tableLayoutPanel5.Location = new System.Drawing.Point(12, 104);
             this.tableLayoutPanel5.Name = "tableLayoutPanel5";
             this.tableLayoutPanel5.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.tableLayoutPanel5.RowCount = 1;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(971, 40);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(1295, 40);
             this.tableLayoutPanel5.TabIndex = 14;
             // 
             // label2
@@ -373,24 +372,11 @@
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(367, 4);
+            this.label2.Location = new System.Drawing.Point(369, 4);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(236, 32);
             this.label2.TabIndex = 0;
             this.label2.Text = "Mexico - Acapulco";
-            // 
-            // tableLayoutPanel1
-            // 
-            this.tableLayoutPanel1.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.tableLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
-            this.tableLayoutPanel1.ColumnCount = 1;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 314F));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(994, 138);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 1;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(305, 40);
-            this.tableLayoutPanel1.TabIndex = 13;
             // 
             // dataGridView1
             // 
@@ -415,8 +401,8 @@
             this.webServiceDGV});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 149);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 153);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
@@ -436,7 +422,7 @@
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.Black;
             this.dataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(972, 497);
+            this.dataGridView1.Size = new System.Drawing.Size(969, 497);
             this.dataGridView1.TabIndex = 12;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
@@ -476,15 +462,14 @@
             this.Controls.Add(this.tableLayoutPanel3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.tableLayoutPanel5);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximumSize = new System.Drawing.Size(1337, 700);
             this.MinimumSize = new System.Drawing.Size(1337, 700);
             this.Name = "MexicoAca";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Paso Morelos";
+            this.Text = "Monitoreo de listas V3.0";
             this.tableLayoutPanel3.ResumeLayout(false);
             this.tableLayoutPanel3.PerformLayout();
             this.tableLayoutPanel4.ResumeLayout(false);
@@ -525,7 +510,6 @@
         private System.Windows.Forms.CheckBox AlpuyecaCB;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel5;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn plazaDGV;
         private System.Windows.Forms.DataGridViewTextBoxColumn lstabintDGV;

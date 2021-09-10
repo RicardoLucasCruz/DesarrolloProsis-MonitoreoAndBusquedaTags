@@ -27,3 +27,17 @@ C:\Users\Desarrollo_Mike\Desktop\RichiLucas\Monitoreo\Monitoreo\obj\Debug\Monito
 C:\Users\Dzwk1\Desktop\Monitoreo\Monitoreo\obj\Debug\Monitoreo.MexicoIra.resources
 C:\Users\Dzwk1\Desktop\Monitoreo\Monitoreo\obj\Debug\Monitoreo.MexicoAca.resources
 C:\Users\Desarrollo_Mike\Desktop\RichiLucas\Monitoreo\Monitoreo\obj\Debug\Monitoreo.MexicoAca.resources
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe.config
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.pdb
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\UserImpersonation.dll
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csprojAssemblyReference.cache
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.MexicoAca.resources
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.MexicoIra.resources
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.Properties.Resources.resources
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.GenerateResource.cache
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CopyComplete
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.pdb

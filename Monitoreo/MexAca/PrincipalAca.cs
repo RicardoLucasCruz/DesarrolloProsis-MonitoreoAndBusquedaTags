@@ -142,6 +142,8 @@ namespace Monitoreo
 
         public void PrincipalF(bool Alpuyeca, bool PasoMorelos, bool PaloBlanco, bool LaVenta, bool Xochitepec, bool Aeropuerto, bool EmilianoZapata, bool Tlalpan, bool TresMarias, bool FranciscoVelazco)
         {
+            GetFlags();
+             
             //LSTABINT y WS******************************************************
             if (Alpuyeca == true)
             {
@@ -905,9 +907,9 @@ namespace Monitoreo
         /// </summary>
         public void GetFlags()
         {
-            var appSettings = ConfigurationManager.AppSettings;
+            var conexion = Convert.ToString(ConfigurationManager.ConnectionStrings["string1"]);
 
-            List<Flag> flags = getBanderas.GetAll(appSettings["string1"]);
+            List<Flag> flags = getBanderas.GetAll(conexion);
 
             //Conexion banderas
             foreach (var item in flags)

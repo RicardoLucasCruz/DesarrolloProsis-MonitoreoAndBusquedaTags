@@ -40,7 +40,7 @@ namespace Monitoreo
        {
            try
            {
-               SqlConnection conn = new SqlConnection("Data Source=10.1.1.10;Initial Catalog=Listas;User ID=sa;Password=CAPUFE");
+               SqlConnection conn = new SqlConnection(Convert.ToString(ConfigurationManager.ConnectionStrings["string1"]));
                conn.Open();
 
                switch (Codigo)
