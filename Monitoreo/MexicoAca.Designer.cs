@@ -183,7 +183,7 @@
             this.btnLimpiar2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnLimpiar2.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLimpiar2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar2.Location = new System.Drawing.Point(11, 464);
+            this.btnLimpiar2.Location = new System.Drawing.Point(11, 449);
             this.btnLimpiar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar2.Name = "btnLimpiar2";
             this.btnLimpiar2.Size = new System.Drawing.Size(299, 34);
@@ -210,7 +210,7 @@
             this.btnAceptar2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAceptar2.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAceptar2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar2.Location = new System.Drawing.Point(11, 426);
+            this.btnAceptar2.Location = new System.Drawing.Point(11, 411);
             this.btnAceptar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar2.Name = "btnAceptar2";
             this.btnAceptar2.Size = new System.Drawing.Size(299, 34);
@@ -248,13 +248,13 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(304, 389);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(304, 374);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // FranciscoVelazcoCB
             // 
             this.FranciscoVelazcoCB.AutoSize = true;
-            this.FranciscoVelazcoCB.Location = new System.Drawing.Point(3, 345);
+            this.FranciscoVelazcoCB.Location = new System.Drawing.Point(3, 336);
             this.FranciscoVelazcoCB.Name = "FranciscoVelazcoCB";
             this.FranciscoVelazcoCB.Size = new System.Drawing.Size(155, 22);
             this.FranciscoVelazcoCB.TabIndex = 13;
@@ -264,7 +264,7 @@
             // TresMariasCB
             // 
             this.TresMariasCB.AutoSize = true;
-            this.TresMariasCB.Location = new System.Drawing.Point(3, 307);
+            this.TresMariasCB.Location = new System.Drawing.Point(3, 299);
             this.TresMariasCB.Name = "TresMariasCB";
             this.TresMariasCB.Size = new System.Drawing.Size(109, 22);
             this.TresMariasCB.TabIndex = 12;
@@ -274,7 +274,7 @@
             // TlalpanCB
             // 
             this.TlalpanCB.AutoSize = true;
-            this.TlalpanCB.Location = new System.Drawing.Point(3, 269);
+            this.TlalpanCB.Location = new System.Drawing.Point(3, 262);
             this.TlalpanCB.Name = "TlalpanCB";
             this.TlalpanCB.Size = new System.Drawing.Size(77, 22);
             this.TlalpanCB.TabIndex = 11;
@@ -284,7 +284,7 @@
             // EmilianoZapataCB
             // 
             this.EmilianoZapataCB.AutoSize = true;
-            this.EmilianoZapataCB.Location = new System.Drawing.Point(3, 231);
+            this.EmilianoZapataCB.Location = new System.Drawing.Point(3, 225);
             this.EmilianoZapataCB.Name = "EmilianoZapataCB";
             this.EmilianoZapataCB.Size = new System.Drawing.Size(141, 22);
             this.EmilianoZapataCB.TabIndex = 10;
@@ -294,7 +294,7 @@
             // AeropuertoCB
             // 
             this.AeropuertoCB.AutoSize = true;
-            this.AeropuertoCB.Location = new System.Drawing.Point(3, 193);
+            this.AeropuertoCB.Location = new System.Drawing.Point(3, 188);
             this.AeropuertoCB.Name = "AeropuertoCB";
             this.AeropuertoCB.Size = new System.Drawing.Size(105, 22);
             this.AeropuertoCB.TabIndex = 9;
@@ -304,7 +304,7 @@
             // XochitepecCB
             // 
             this.XochitepecCB.AutoSize = true;
-            this.XochitepecCB.Location = new System.Drawing.Point(3, 155);
+            this.XochitepecCB.Location = new System.Drawing.Point(3, 151);
             this.XochitepecCB.Name = "XochitepecCB";
             this.XochitepecCB.Size = new System.Drawing.Size(106, 22);
             this.XochitepecCB.TabIndex = 8;
@@ -314,7 +314,7 @@
             // PaloBlancoCB
             // 
             this.PaloBlancoCB.AutoSize = true;
-            this.PaloBlancoCB.Location = new System.Drawing.Point(3, 79);
+            this.PaloBlancoCB.Location = new System.Drawing.Point(3, 77);
             this.PaloBlancoCB.Name = "PaloBlancoCB";
             this.PaloBlancoCB.Size = new System.Drawing.Size(111, 22);
             this.PaloBlancoCB.TabIndex = 6;
@@ -324,7 +324,7 @@
             // PasoMorelosCB
             // 
             this.PasoMorelosCB.AutoSize = true;
-            this.PasoMorelosCB.Location = new System.Drawing.Point(3, 41);
+            this.PasoMorelosCB.Location = new System.Drawing.Point(3, 40);
             this.PasoMorelosCB.Name = "PasoMorelosCB";
             this.PasoMorelosCB.Size = new System.Drawing.Size(124, 22);
             this.PasoMorelosCB.TabIndex = 5;
@@ -334,7 +334,7 @@
             // LaVentaCB
             // 
             this.LaVentaCB.AutoSize = true;
-            this.LaVentaCB.Location = new System.Drawing.Point(3, 117);
+            this.LaVentaCB.Location = new System.Drawing.Point(3, 114);
             this.LaVentaCB.Name = "LaVentaCB";
             this.LaVentaCB.Size = new System.Drawing.Size(86, 22);
             this.LaVentaCB.TabIndex = 7;
@@ -401,7 +401,7 @@
             this.webServiceDGV});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 153);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 149);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;

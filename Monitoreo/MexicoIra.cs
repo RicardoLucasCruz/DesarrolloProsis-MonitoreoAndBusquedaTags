@@ -317,6 +317,10 @@ namespace Monitoreo
                 {
                     e.CellStyle.BackColor = Color.OrangeRed;
                 }
+                else if (e.Value.ToString().Contains("SQL no visible"))  //Si el valor de la celda contiene la palabra hora");
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
             }
         }
     }

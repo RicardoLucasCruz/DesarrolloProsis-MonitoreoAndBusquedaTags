@@ -8,7 +8,7 @@ namespace Monitoreo
 {
     class Flag
     {
-        //Encapsulamiento de las variables las cuales son para las bases de datos
+        //Encapsulamiento de las variables las cuales son para las base de datos donde se encuentran la tabla "Flag"
         public int id_flag { get; set; }
         public int id_PLaza { get; set; }
         public bool conexion { get; set; }

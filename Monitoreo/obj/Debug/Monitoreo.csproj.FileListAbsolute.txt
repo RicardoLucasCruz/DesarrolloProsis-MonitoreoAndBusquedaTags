@@ -41,3 +41,18 @@ C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusqued
 C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CopyComplete
 C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe
 C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.pdb
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe.config
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.pdb
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\System.Data.SqlClient.dll
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\UserImpersonation.dll
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\System.Data.SqlClient.xml
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csprojAssemblyReference.cache
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.MexicoAca.resources
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.MexicoIra.resources
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.Properties.Resources.resources
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.GenerateResource.cache
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CoreCompileInputs.cache
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CopyComplete
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.pdb

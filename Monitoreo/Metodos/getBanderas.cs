@@ -18,29 +18,37 @@ namespace Monitoreo
         {
             List<Flag> getBanderas = new List<Flag>();
 
-            SqlConnection conn = new SqlConnection(strinConexion);
+            try
             {
-                conn.Open();
-
-                const string sqlQuery = "select id_Flag, Conexion, LSTABINT, WS from Flag";
-                using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
+                SqlConnection conn = new SqlConnection(strinConexion);
                 {
-                    SqlDataReader dataReader = cmd.ExecuteReader();
-                    while (dataReader.Read())
+                    conn.Open();
+
+                    const string sqlQuery = "select id_Flag, Conexion, LSTABINT, WS from Flag";
+                    using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
                     {
-                        Flag flag = new Flag
+                        SqlDataReader dataReader = cmd.ExecuteReader();
+                        while (dataReader.Read())
                         {
-                            id_flag = Convert.ToInt32(dataReader["id_flag"]),
-                            conexion = Convert.ToBoolean(dataReader["conexion"]),
-                            LSTABINT = Convert.ToBoolean(dataReader["LSTABINT"]),
-                            WS = Convert.ToBoolean(dataReader["WS"]),
-                        };
-                        getBanderas.Add(flag);
-                    }
+                            Flag flag = new Flag
+                            {
+                                id_flag = Convert.ToInt16(dataReader["id_flag"]),
+                                conexion = Convert.ToBoolean(dataReader["conexion"]),
+                                LSTABINT = Convert.ToBoolean(dataReader["LSTABINT"]),
+                                WS = Convert.ToBoolean(dataReader["WS"]),
+                            };
+                            getBanderas.Add(flag);
+                        }
+                    }                    
+                    conn.Close();
+                    return getBanderas;
                 }
-                conn.Close();
             }
-            return getBanderas;
+            catch (Exception)
+            {
+                return getBanderas;
+                throw;
+            }
         }
         /// <summary>
         /// Metodo que se utiliza para traer el id de plaza mediante el ip

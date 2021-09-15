@@ -23,24 +23,28 @@ namespace Monitoreo
         {
             //Intancia de un objeto de la clase UserImpersonation para obtener el permiso de entrar a la carpeta compartida
             UserImpersonation user = new UserImpersonation("Administrador", "10.1.1.87", "Cz1GvqqWR3");
-            string Variable = "";
-            string[] Directorio = Directory.GetFiles($@"\\{IP}\\GEAINT\\PARAM\\ACTUEL\\");
+            string[] Directorio = Directory.GetFiles($@"{IP}\\PARAM\\ACTUEL\\");
 
             foreach (var item in Directorio)
             {
                 if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
                 {
-                    return Variable = item.Substring(36, 12);
+                    return item.Substring(item.Length - 12, 12);
                 }
             }
 
-            return Variable;
+            return "";
         }
+        /// <summary>
+        /// Metodo que hace actualizaciones a la bandera de esa plaza dependiendo de el codigo que se le mande
+        /// </summary>
+        /// <param name="IP"></param>
+        /// <param name="Codigo"></param>
        static public void InsertLog(string IP, int Codigo)
        {
            try
            {
-               SqlConnection conn = new SqlConnection(Convert.ToString(ConfigurationManager.ConnectionStrings["string1"]));
+               SqlConnection conn = new SqlConnection(Convert.ToString(ConfigurationManager.ConnectionStrings["Global"]));
                conn.Open();
 
                switch (Codigo)
@@ -129,7 +133,7 @@ namespace Monitoreo
                }
                conn.Close();
            }
-           catch (Exception )
+           catch (Exception ex)
            {
 
                throw;

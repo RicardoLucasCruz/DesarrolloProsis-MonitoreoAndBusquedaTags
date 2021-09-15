@@ -140,16 +140,30 @@ namespace Monitoreo
 
         //End Bandera LSTABINT
 
+            /// <summary>
+            /// En esta funcion lo que se hace es llamar al la funcion GetFlags, tambien a cada plaza se le da sus datos para asi ser mostradas
+            /// </summary>
+            /// <param name="Alpuyeca"></param>
+            /// <param name="PasoMorelos"></param>
+            /// <param name="PaloBlanco"></param>
+            /// <param name="LaVenta"></param>
+            /// <param name="Xochitepec"></param>
+            /// <param name="Aeropuerto"></param>
+            /// <param name="EmilianoZapata"></param>
+            /// <param name="Tlalpan"></param>
+            /// <param name="TresMarias"></param>
+            /// <param name="FranciscoVelazco"></param>
         public void PrincipalF(bool Alpuyeca, bool PasoMorelos, bool PaloBlanco, bool LaVenta, bool Xochitepec, bool Aeropuerto, bool EmilianoZapata, bool Tlalpan, bool TresMarias, bool FranciscoVelazco)
         {
-            GetFlags();
+            GetFlags(Convert.ToString(ConfigurationManager.ConnectionStrings["Global"]));
              
             //LSTABINT y WS******************************************************
             if (Alpuyeca == true)
             {
                 //Alpuyeca
-                var APappSettings = ConfigurationManager.AppSettings["Laboratorio"];
-                AlpuyecaLS = getLSTABINT(APappSettings, B_Al_Serv, B_LSTABINT_Al);
+                var APappSettings = ConfigurationManager.AppSettings["AlpuyecaIP"];
+                var APappSettingsR = ConfigurationManager.AppSettings["AlpuyecaRuta"];
+                AlpuyecaLS = getLSTABINT(APappSettings, APappSettingsR, B_Al_Serv, B_LSTABINT_Al);
 
                 if (StatusConectionChange == true)
                 {
@@ -169,7 +183,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    AlpuyecaTamaño = TamañoLSTABINT(APappSettings, AlpuyecaLS, B_TamañoLSTABINT_Al);
+                    AlpuyecaTamaño = TamañoLSTABINT(APappSettingsR, AlpuyecaLS, B_TamañoLSTABINT_Al);
                 }
 
                 if (StatusSizeChange == true)
@@ -179,7 +193,8 @@ namespace Monitoreo
                 }
                 //Alpuyeca WS
                 var Al79 = ConfigurationManager.AppSettings["Al_IP_79"];
-                Ult_WS_Al = UltimasTransaccionesWS(Al79, B_Al_WS, B_WS_Al_WS);
+                var conn = ConfigurationManager.AppSettings["AlpulyecaM"];
+                Ult_WS_Al = UltimasTransaccionesWS(Al79, Convert.ToString(conn), B_Al_WS, B_WS_Al_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -196,8 +211,9 @@ namespace Monitoreo
             if (PasoMorelos  == true)
             {
                 //PasoMorelos
-                var PMappSettings = ConfigurationManager.AppSettings["JorobasIP"];
-                PasoMorelosLS = getLSTABINT(PMappSettings, B_PsM_Serv, B_LSTABINT_PsM);
+                var PMappSettings = ConfigurationManager.AppSettings["PasoMorelosIP"];
+                var PMappSettingsR = ConfigurationManager.AppSettings["PasoMorelosRuta"];
+                PasoMorelosLS = getLSTABINT(PMappSettings, PMappSettingsR, B_PsM_Serv, B_LSTABINT_PsM);
 
                 if (StatusConectionChange == true)
                 {
@@ -217,7 +233,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    PasoMorelosTamaño = TamañoLSTABINT(PMappSettings, PasoMorelosLS, B_TamañoLSTABINT_PsM);
+                    PasoMorelosTamaño = TamañoLSTABINT(PMappSettingsR, PasoMorelosLS, B_TamañoLSTABINT_PsM);
                 }
 
                 if (StatusSizeChange == true)
@@ -227,7 +243,8 @@ namespace Monitoreo
                 }
                 //PasoMorelos WS
                 var PsM79 = ConfigurationManager.AppSettings["PsM_IP_79"];
-                Ult_WS_PsM = UltimasTransaccionesWS(PsM79, B_PsM_WS, B_WS_PsM_WS);
+                var conn = ConfigurationManager.AppSettings["PasoMorelosM"];
+                Ult_WS_PsM = UltimasTransaccionesWS(PsM79, Convert.ToString(conn), B_PsM_WS, B_WS_PsM_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -245,7 +262,8 @@ namespace Monitoreo
             {
                 //Potitlan
                 var PoBappSettings = ConfigurationManager.AppSettings["PaloBlancoIP"];
-                PoloBlancoLS = getLSTABINT(PoBappSettings, B_PoB_Serv, B_LSTABINT_PoB);
+                var PoBappSettingsR = ConfigurationManager.AppSettings["PaloBlancoRuta"];
+                PoloBlancoLS = getLSTABINT(PoBappSettings, PoBappSettingsR, B_PoB_Serv, B_LSTABINT_PoB);
 
                 if (StatusConectionChange == true)
                 {
@@ -265,7 +283,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    PoloBlancoTamaño = TamañoLSTABINT(PoBappSettings, PoloBlancoLS, B_TamañoLSTABINT_PoB);
+                    PoloBlancoTamaño = TamañoLSTABINT(PoBappSettingsR, PoloBlancoLS, B_TamañoLSTABINT_PoB);
                 }
 
                 if (StatusSizeChange == true)
@@ -275,7 +293,8 @@ namespace Monitoreo
                 }
                 //Palo Blanco WS
                 var PaB79 = ConfigurationManager.AppSettings["PaB_IP_79"];
-                Ult_WS_PoB = UltimasTransaccionesWS(PaB79, B_PoB_WS, B_WS_PoB_WS);
+                var conn = ConfigurationManager.AppSettings["PaloBlancoM"];
+                Ult_WS_PoB = UltimasTransaccionesWS(PaB79, Convert.ToString(conn), B_PoB_WS, B_WS_PoB_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -293,7 +312,8 @@ namespace Monitoreo
             {
                 //Palmillas
                 var LaVappSettings = ConfigurationManager.AppSettings["LaVentaIP"];
-                LaVentaLS = getLSTABINT(LaVappSettings, B_LaV_Serv, B_LSTABINT_LaV);
+                var LaVappSettingsR = ConfigurationManager.AppSettings["LaVentaRuta"];
+                LaVentaLS = getLSTABINT(LaVappSettings, LaVappSettingsR, B_LaV_Serv, B_LSTABINT_LaV);
 
                 if (StatusConectionChange == true)
                 {
@@ -313,7 +333,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    LaVentaTamaño = TamañoLSTABINT(LaVappSettings, LaVentaLS, B_TamañoLSTABINT_LaV);
+                    LaVentaTamaño = TamañoLSTABINT(LaVappSettingsR, LaVentaLS, B_TamañoLSTABINT_LaV);
                 }
 
                 if (StatusSizeChange == true)
@@ -323,7 +343,8 @@ namespace Monitoreo
                 }
                 //La venta WS
                 var LaV79 = ConfigurationManager.AppSettings["LaV_IP_79"];
-                Ult_WS_LaV = UltimasTransaccionesWS(LaV79, B_LaV_WS, B_WS_LaV_WS);
+                var conn = ConfigurationManager.AppSettings["LaVentaM"];
+                Ult_WS_LaV = UltimasTransaccionesWS(LaV79, Convert.ToString(conn), B_LaV_WS, B_WS_LaV_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -341,7 +362,8 @@ namespace Monitoreo
             {
                 //Xochitepec
                 var XoappSettings = ConfigurationManager.AppSettings["XochitepecIP"];
-                XochitepecLS = getLSTABINT(XoappSettings, B_Xo_Serv, B_LSTABINT_Xo);
+                var XoappSettingsR = ConfigurationManager.AppSettings["XochitepecRuta"];
+                XochitepecLS = getLSTABINT(XoappSettings, XoappSettingsR, B_Xo_Serv, B_LSTABINT_Xo);
 
                 if (StatusConectionChange == true)
                 {
@@ -361,7 +383,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    XochitepecTamaño = TamañoLSTABINT(XoappSettings, XochitepecTamaño, B_TamañoLSTABINT_Xo);
+                    XochitepecTamaño = TamañoLSTABINT(XoappSettingsR, XochitepecTamaño, B_TamañoLSTABINT_Xo);
                 }
 
                 if (StatusSizeChange == true)
@@ -371,7 +393,8 @@ namespace Monitoreo
                 }
                 //Xochitepec WS
                 var xo79 = ConfigurationManager.AppSettings["Xo_IP_79"];
-                Ult_WS_Xo = UltimasTransaccionesWS(xo79, B_Xo_WS, B_WS_Xo_WS);
+                var conn = ConfigurationManager.AppSettings["XochitepecM"];
+                Ult_WS_Xo = UltimasTransaccionesWS(xo79, Convert.ToString(conn), B_Xo_WS, B_WS_Xo_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -389,7 +412,8 @@ namespace Monitoreo
             {
                 //Aeropuerto
                 var AeappSettings = ConfigurationManager.AppSettings["AeropuertoIP"];
-                AeropuertoLS = getLSTABINT(AeappSettings, B_Ae_Serv, B_LSTABINT_Ae);
+                var AeappSettingsR = ConfigurationManager.AppSettings["AeropuertoRuta"];
+                AeropuertoLS = getLSTABINT(AeappSettings, AeappSettingsR, B_Ae_Serv, B_LSTABINT_Ae);
 
                 if (StatusConectionChange == true)
                 {
@@ -409,7 +433,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    AeropuertoTamaño = TamañoLSTABINT(AeappSettings, AeropuertoLS, B_TamañoLSTABINT_Ae);
+                    AeropuertoTamaño = TamañoLSTABINT(AeappSettingsR, AeropuertoLS, B_TamañoLSTABINT_Ae);
                 }
 
                 if (StatusSizeChange == true)
@@ -419,7 +443,8 @@ namespace Monitoreo
                 }
                 //Aeropuerto WS
                 var Ae79 = ConfigurationManager.AppSettings["Ae_IP_79"];
-                Ult_WS_Ae = UltimasTransaccionesWS(Ae79, B_Ae_WS, B_WS_Ae_WS);
+                var conn = ConfigurationManager.AppSettings["AeropuertoM"];
+                Ult_WS_Ae = UltimasTransaccionesWS(Ae79, Convert.ToString(conn), B_Ae_WS, B_WS_Ae_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -437,7 +462,8 @@ namespace Monitoreo
             {
                 //Emiliano Zapata
                 var EmZappSettings = ConfigurationManager.AppSettings["EmilianoZapataIP"];
-                EmilianoZapataLS = getLSTABINT(EmZappSettings, B_Em_Serv, B_LSTABINT_Em);
+                var EmZappSettingsR = ConfigurationManager.AppSettings["EmilianoZapataRuta"];
+                EmilianoZapataLS = getLSTABINT(EmZappSettings, EmZappSettingsR, B_Em_Serv, B_LSTABINT_Em);
 
                 if (StatusConectionChange == true)
                 {
@@ -457,7 +483,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    EmilianoZapataTamaño = TamañoLSTABINT(EmZappSettings, EmilianoZapataLS, B_TamañoLSTABINT_Em);
+                    EmilianoZapataTamaño = TamañoLSTABINT(EmZappSettingsR, EmilianoZapataLS, B_TamañoLSTABINT_Em);
                 }
 
                 if (StatusSizeChange == true)
@@ -467,7 +493,8 @@ namespace Monitoreo
                 }
                 //Emiliano Zapata WS
                 var EZ79 = ConfigurationManager.AppSettings["EmZ_IP_79"];
-                Ult_WS_Em = UltimasTransaccionesWS(EZ79, B_Em_WS, B_WS_Em_WS);
+                var conn = ConfigurationManager.AppSettings["EmilianoZapataM"];
+                Ult_WS_Em = UltimasTransaccionesWS(EZ79, conn, B_Em_WS, B_WS_Em_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -484,8 +511,9 @@ namespace Monitoreo
             if (Tlalpan == true)
             {
                 //Tlalpan
-                var TpappSettings = ConfigurationManager.AppSettings["Tlalpan"];
-                TlalpanLS = getLSTABINT(TpappSettings, B_Tl_Serv, B_LSTABINT_Tl);
+                var TpappSettings = ConfigurationManager.AppSettings["TlalpanIP"];
+                var TpappSettingsR = ConfigurationManager.AppSettings["TlalpanRuta"];
+                TlalpanLS = getLSTABINT(TpappSettings, TpappSettingsR, B_Tl_Serv, B_LSTABINT_Tl);
 
                 if (StatusConectionChange == true)
                 {
@@ -505,7 +533,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    TlalpanTamaño = TamañoLSTABINT(TpappSettings, TlalpanLS, B_TamañoLSTABINT_Tl);
+                    TlalpanTamaño = TamañoLSTABINT(TpappSettingsR, TlalpanLS, B_TamañoLSTABINT_Tl);
                 }
 
                 if (StatusSizeChange == true)
@@ -515,7 +543,8 @@ namespace Monitoreo
                 }
                 //Tlalpan WS
                 var Tl79 = ConfigurationManager.AppSettings["Tl_IP_79"];
-                Ult_WS_Tl = UltimasTransaccionesWS(Tl79, B_Tl_WS, B_WS_Tl_WS);
+                var conn = ConfigurationManager.AppSettings["TlalpanM"];
+                Ult_WS_Tl = UltimasTransaccionesWS(Tl79, conn, B_Tl_WS, B_WS_Tl_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -533,7 +562,8 @@ namespace Monitoreo
             {
                 //TresMarias
                 var TMappSettings = ConfigurationManager.AppSettings["TresMariasIP"];
-                TresMariasLS = getLSTABINT(TMappSettings, B_Tr_Serv, B_LSTABINT_Tr);
+                var TMappSettingsR = ConfigurationManager.AppSettings["TresMariasRuta"];
+                TresMariasLS = getLSTABINT(TMappSettings, TMappSettingsR, B_Tr_Serv, B_LSTABINT_Tr);
 
                 if (StatusConectionChange == true)
                 {
@@ -553,7 +583,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    TresMariasTamaño = TamañoLSTABINT(TMappSettings, TresMariasLS, B_TamañoLSTABINT_Tr);
+                    TresMariasTamaño = TamañoLSTABINT(TMappSettingsR, TresMariasLS, B_TamañoLSTABINT_Tr);
                 }
 
                 if (StatusSizeChange == true)
@@ -563,7 +593,8 @@ namespace Monitoreo
                 }
                 //Tres Marias WS
                 var CG79 = ConfigurationManager.AppSettings["TrM_IP_79"];
-                Ult_WS_Tr = UltimasTransaccionesWS(CG79, B_Tr_WS, B_WS_Tr_WS);
+                var conn = ConfigurationManager.AppSettings["TresMariasM"];
+                Ult_WS_Tr = UltimasTransaccionesWS(CG79, Convert.ToString(conn), B_Tr_WS, B_WS_Tr_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -581,7 +612,8 @@ namespace Monitoreo
             {
                 //Francisco
                 var FVappSettings = ConfigurationManager.AppSettings["FranciscoVelazcoIP"];
-                FranciscoVelazcoLS = getLSTABINT(FVappSettings, B_FrV_Serv, B_LSTABINT_FrV);
+                var FVappSettingsR = ConfigurationManager.AppSettings["FranciscoVelazcoRuta"];
+                FranciscoVelazcoLS = getLSTABINT(FVappSettings, FVappSettingsR, B_FrV_Serv, B_LSTABINT_FrV);
 
                 if (StatusConectionChange == true)
                 {
@@ -601,7 +633,7 @@ namespace Monitoreo
                 }
                 else
                 {
-                    FranciscoVelazcoTamaño = TamañoLSTABINT(FVappSettings, FranciscoVelazcoLS, B_TamañoLSTABINT_Frv);
+                    FranciscoVelazcoTamaño = TamañoLSTABINT(FVappSettingsR, FranciscoVelazcoLS, B_TamañoLSTABINT_Frv);
                 }
 
                 if (StatusSizeChange == true)
@@ -611,7 +643,8 @@ namespace Monitoreo
                 }
                 //FranciscoVelazco WS
                 var SA79 = ConfigurationManager.AppSettings["FrV_IP_79"];
-                Ult_WS_FrV = UltimasTransaccionesWS(SA79, B_FrV_WS, B_WS_FrV_WS);
+                var conn = ConfigurationManager.AppSettings["FranciscoVelazcoM"];
+                Ult_WS_FrV = UltimasTransaccionesWS(SA79, Convert.ToString(conn), B_FrV_WS, B_WS_FrV_WS);
 
                 if (StatusConectionChange == true)
                 {
@@ -639,8 +672,15 @@ namespace Monitoreo
             TresMariasP = new string[] { "Tres Marias", TresMariasLS + Environment.NewLine + TresMariasTamaño, Ult_WS_Tr };
             FranciscoVelazcoP = new string[] { "Salamanca", FranciscoVelazcoLS + Environment.NewLine + FranciscoVelazcoTamaño, Ult_WS_FrV };
         }
-
-        public string getLSTABINT(string IP, bool Bandera, bool BanderaLS)
+        /// <summary>
+        /// Obtengo el nombre, extencion, fecha de creacion de la lista lstabint deseada
+        /// </summary>
+        /// <param name="IP"></param>
+        /// <param name="ruta"></param>
+        /// <param name="Bandera"></param>
+        /// <param name="BanderaLS"></param>
+        /// <returns></returns>
+        public string getLSTABINT(string IP, string ruta, bool Bandera, bool BanderaLS)
         {
             string Res;
             DateTime FH_Transaccion;
@@ -657,10 +697,10 @@ namespace Monitoreo
 
                 try
                 {
-                    string Nombre = Metodos.NombreLSTABINT(IP);
-                    FileInfo file = new FileInfo($@"\\{IP}\\GEAINT\\PARAM\\ACTUEL\\{Nombre}");
+                    string Nombre = Metodos.NombreLSTABINT(ruta);
+                    FileInfo file = new FileInfo($@"{ruta}\\PARAM\\ACTUEL\\{Nombre}");
                     FH_Transaccion = file.CreationTime;
-                    string extension = Path.GetExtension($@"\\{IP}\\GEAINT\\PARAM\\ACTUEL\\{Nombre}");
+                    string extension = Path.GetExtension($@"{ruta}\\PARAM\\ACTUEL\\{Nombre}");
 
                     if (Nombre == string.Empty)
                     {
@@ -744,12 +784,18 @@ namespace Monitoreo
                 return Res;
             }
         }
-
+        /// <summary>
+        /// Obtengo el tamaño de mi lstabint
+        /// </summary>
+        /// <param name="IP"></param>
+        /// <param name="Nombre"></param>
+        /// <param name="Bandera"></param>
+        /// <returns></returns>
         private string TamañoLSTABINT(string IP, string Nombre, bool Bandera)
         {
             string Variable = "";
             int VarNum;
-            DirectoryInfo directory = new DirectoryInfo($@"\\{IP}\\GEAINT\\PARAM\\ACTUEL\\");
+            DirectoryInfo directory = new DirectoryInfo($@"{IP}\\PARAM\\ACTUEL\\");
 
             if (Bandera == true)
             {
@@ -794,37 +840,58 @@ namespace Monitoreo
 
             return Variable;
         }
-
-        private string UltimasTransaccionesWS(string IP, bool Bandera, bool BanderaWS)
+        /// <summary>
+        /// Obntengo el ultimo cruce
+        /// </summary>
+        /// <param name="IP"></param>
+        /// <param name="conexion"></param>
+        /// <param name="Bandera"></param>
+        /// <param name="BanderaWS"></param>
+        /// <returns></returns>
+        private string UltimasTransaccionesWS(string IP, string conexion, bool Bandera, bool BanderaWS)
         {
             string Res = "";
-            Ping ping = new Ping();
-            PingReply respuestaReply = ping.Send(IP);
+            //Ping ping = new Ping();
+            //PingReply respuestaReply = ping.Send(IP);
 
-            if (respuestaReply.Status == IPStatus.Success)
+            //if (respuestaReply.Status == IPStatus.Success)
+            //{            
+            try
             {
+                SqlConnection conn = new SqlConnection(conexion);
+                conn.Open();
+
+                SqlCommand cmd = new SqlCommand();
+                cmd.CommandText = "SELECT TOP 1 [DATE_TRANSACTION] FROM [ProsisDBv1_1].[dbo].[pn_importacion_wsIndra] ORDER BY DATE_TRANSACTION DESC";
+                cmd.Connection = conn;
+
                 if (Bandera == false)
                 {
                     Metodos.InsertLog(IP, 101);
                     StatusConectionChange = true;
                 }
 
-                try
+                DateTime FH_Transaccion;
+
+                FH_Transaccion = Convert.ToDateTime(cmd.ExecuteScalar());
+
+                int DiferenciasDias = DateTime.Now.Subtract(FH_Transaccion).Days;
+
+                if (DiferenciasDias != 0)
                 {
-                    SqlConnection conn = new SqlConnection($"Data Source={IP},1433;Network Library=DBMSSOCN;Initial Catalog=ProsisDBv1_1;User ID=sa;Password=CAPUFE;");
-                    conn.Open();
+                    Res = FH_Transaccion + "\r\n" + "Desactualizada";
 
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = "SELECT TOP 1 [DATE_TRANSACTION] FROM [ProsisDBv1_1].[dbo].[pn_importacion_wsIndra] ORDER BY DATE_TRANSACTION DESC";
-                    cmd.Connection = conn;
+                    if (BanderaWS == true)
+                    {
+                        Metodos.InsertLog(IP, 400);
+                        StatusWSChange = true;
+                    }
+                }
+                else
+                {
+                    int DiferenciaHoras = DateTime.Now.Subtract(FH_Transaccion).Hours;
 
-                    DateTime FH_Transaccion;
-
-                    FH_Transaccion = Convert.ToDateTime(cmd.ExecuteScalar());
-
-                    int DiferenciasDias = DateTime.Now.Subtract(FH_Transaccion).Days;
-
-                    if (DiferenciasDias != 0)
+                    if (DiferenciaHoras != 0)
                     {
                         Res = FH_Transaccion + "\r\n" + "Desactualizada";
 
@@ -836,9 +903,9 @@ namespace Monitoreo
                     }
                     else
                     {
-                        int DiferenciaHoras = DateTime.Now.Subtract(FH_Transaccion).Hours;
+                        int DiferenciaMinutos = DateTime.Now.Subtract(FH_Transaccion).Minutes;
 
-                        if (DiferenciaHoras != 0)
+                        if (DiferenciaMinutos > 30)
                         {
                             Res = FH_Transaccion + "\r\n" + "Desactualizada";
 
@@ -850,65 +917,48 @@ namespace Monitoreo
                         }
                         else
                         {
-                            int DiferenciaMinutos = DateTime.Now.Subtract(FH_Transaccion).Minutes;
-
-                            if (DiferenciaMinutos > 30)
+                            Res = Convert.ToString(FH_Transaccion);
+                            if (true)
                             {
-                                Res = FH_Transaccion + "\r\n" + "Desactualizada";
-
-                                if (BanderaWS == true)
+                                if (BanderaWS == false)
                                 {
-                                    Metodos.InsertLog(IP, 400);
+                                    Metodos.InsertLog(IP, 401);
                                     StatusWSChange = true;
-                                }
-                            }
-                            else
-                            {
-                                Res = Convert.ToString(FH_Transaccion);
-                                if (true)
-                                {
-                                    if (BanderaWS == false)
-                                    {
-                                        Metodos.InsertLog(IP, 401);
-                                        StatusWSChange = true;
-                                    }
                                 }
                             }
                         }
                     }
-
-                    conn.Close();
-
-                    return Res;
-                }
-                catch (Exception)
-                {
-                    Res = "SQL no visible";
-                    return Res;
-                    throw;
-                }
-            }
-            else
-            {
-                if (Bandera == true)
-                {
-                    Metodos.InsertLog(IP, 100);
-                    StatusConectionChange = true;
                 }
 
-                Res = "Sin conexion con  " + IP;
+                conn.Close();
+
                 return Res;
             }
+            catch (Exception)
+            {
+                Res = "SQL no visible";
+                return Res;
+                throw;
+            }
+            //}
+            //else
+            //{
+            //    if (Bandera == true)
+            //    {
+            //        Metodos.InsertLog(IP, 100);
+            //        StatusConectionChange = true;
+            //    }
 
+            //    Res = "Sin conexion con  " + IP;
+            //    return Res;
+            //}
         }
 
         /// <summary>
         /// Metodo para traer datos de la bases de datos e igularlos con las variables locales
         /// </summary>
-        public void GetFlags()
+        public void GetFlags(string conexion)
         {
-            var conexion = Convert.ToString(ConfigurationManager.ConnectionStrings["string1"]);
-
             List<Flag> flags = getBanderas.GetAll(conexion);
 
             //Conexion banderas

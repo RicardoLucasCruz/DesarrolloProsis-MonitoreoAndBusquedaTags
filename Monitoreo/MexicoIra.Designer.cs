@@ -96,7 +96,7 @@ namespace Monitoreo
             this.webServiceDGV});
             this.dataGridView1.EnableHeadersVisualStyles = false;
             this.dataGridView1.GridColor = System.Drawing.Color.Silver;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 154);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 150);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -181,13 +181,13 @@ namespace Monitoreo
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(304, 389);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(304, 376);
             this.tableLayoutPanel2.TabIndex = 5;
             // 
             // SalamancaCB
             // 
             this.SalamancaCB.AutoSize = true;
-            this.SalamancaCB.Location = new System.Drawing.Point(3, 345);
+            this.SalamancaCB.Location = new System.Drawing.Point(3, 336);
             this.SalamancaCB.Name = "SalamancaCB";
             this.SalamancaCB.Size = new System.Drawing.Size(106, 22);
             this.SalamancaCB.TabIndex = 13;
@@ -197,7 +197,7 @@ namespace Monitoreo
             // CerroGordoCB
             // 
             this.CerroGordoCB.AutoSize = true;
-            this.CerroGordoCB.Location = new System.Drawing.Point(3, 307);
+            this.CerroGordoCB.Location = new System.Drawing.Point(3, 299);
             this.CerroGordoCB.Name = "CerroGordoCB";
             this.CerroGordoCB.Size = new System.Drawing.Size(115, 22);
             this.CerroGordoCB.TabIndex = 12;
@@ -207,7 +207,7 @@ namespace Monitoreo
             // VillaGrandeCB
             // 
             this.VillaGrandeCB.AutoSize = true;
-            this.VillaGrandeCB.Location = new System.Drawing.Point(3, 269);
+            this.VillaGrandeCB.Location = new System.Drawing.Point(3, 262);
             this.VillaGrandeCB.Name = "VillaGrandeCB";
             this.VillaGrandeCB.Size = new System.Drawing.Size(113, 22);
             this.VillaGrandeCB.TabIndex = 11;
@@ -217,7 +217,7 @@ namespace Monitoreo
             // LibramientoCB
             // 
             this.LibramientoCB.AutoSize = true;
-            this.LibramientoCB.Location = new System.Drawing.Point(3, 231);
+            this.LibramientoCB.Location = new System.Drawing.Point(3, 225);
             this.LibramientoCB.Name = "LibramientoCB";
             this.LibramientoCB.Size = new System.Drawing.Size(110, 22);
             this.LibramientoCB.TabIndex = 10;
@@ -227,7 +227,7 @@ namespace Monitoreo
             // QueretaroCB
             // 
             this.QueretaroCB.AutoSize = true;
-            this.QueretaroCB.Location = new System.Drawing.Point(3, 193);
+            this.QueretaroCB.Location = new System.Drawing.Point(3, 188);
             this.QueretaroCB.Name = "QueretaroCB";
             this.QueretaroCB.Size = new System.Drawing.Size(97, 22);
             this.QueretaroCB.TabIndex = 9;
@@ -237,7 +237,7 @@ namespace Monitoreo
             // ChichemequillasCB
             // 
             this.ChichemequillasCB.AutoSize = true;
-            this.ChichemequillasCB.Location = new System.Drawing.Point(3, 155);
+            this.ChichemequillasCB.Location = new System.Drawing.Point(3, 151);
             this.ChichemequillasCB.Name = "ChichemequillasCB";
             this.ChichemequillasCB.Size = new System.Drawing.Size(137, 22);
             this.ChichemequillasCB.TabIndex = 8;
@@ -247,7 +247,7 @@ namespace Monitoreo
             // PotitlanCB
             // 
             this.PotitlanCB.AutoSize = true;
-            this.PotitlanCB.Location = new System.Drawing.Point(3, 79);
+            this.PotitlanCB.Location = new System.Drawing.Point(3, 77);
             this.PotitlanCB.Name = "PotitlanCB";
             this.PotitlanCB.Size = new System.Drawing.Size(79, 22);
             this.PotitlanCB.TabIndex = 6;
@@ -257,7 +257,7 @@ namespace Monitoreo
             // JorobasCB
             // 
             this.JorobasCB.AutoSize = true;
-            this.JorobasCB.Location = new System.Drawing.Point(3, 41);
+            this.JorobasCB.Location = new System.Drawing.Point(3, 40);
             this.JorobasCB.Name = "JorobasCB";
             this.JorobasCB.Size = new System.Drawing.Size(84, 22);
             this.JorobasCB.TabIndex = 5;
@@ -267,7 +267,7 @@ namespace Monitoreo
             // PalmillasCB
             // 
             this.PalmillasCB.AutoSize = true;
-            this.PalmillasCB.Location = new System.Drawing.Point(3, 117);
+            this.PalmillasCB.Location = new System.Drawing.Point(3, 114);
             this.PalmillasCB.Name = "PalmillasCB";
             this.PalmillasCB.Size = new System.Drawing.Size(90, 22);
             this.PalmillasCB.TabIndex = 7;
@@ -296,7 +296,7 @@ namespace Monitoreo
             this.tableLayoutPanel4.Location = new System.Drawing.Point(982, 3);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 1;
-            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 6F));
+            this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 72F));
             this.tableLayoutPanel4.Size = new System.Drawing.Size(305, 72);
             this.tableLayoutPanel4.TabIndex = 3;
             // 
@@ -344,7 +344,7 @@ namespace Monitoreo
             this.btnLimpiar.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnLimpiar.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.Location = new System.Drawing.Point(610, 671);
+            this.btnLimpiar.Location = new System.Drawing.Point(610, 635);
             this.btnLimpiar.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(314, 27);
@@ -397,7 +397,7 @@ namespace Monitoreo
             this.btnLimpiar2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnLimpiar2.BackColor = System.Drawing.Color.AliceBlue;
             this.btnLimpiar2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar2.Location = new System.Drawing.Point(11, 464);
+            this.btnLimpiar2.Location = new System.Drawing.Point(11, 451);
             this.btnLimpiar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnLimpiar2.Name = "btnLimpiar2";
             this.btnLimpiar2.Size = new System.Drawing.Size(299, 34);
@@ -424,7 +424,7 @@ namespace Monitoreo
             this.btnAceptar2.Anchor = System.Windows.Forms.AnchorStyles.Right;
             this.btnAceptar2.BackColor = System.Drawing.Color.AliceBlue;
             this.btnAceptar2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAceptar2.Location = new System.Drawing.Point(11, 426);
+            this.btnAceptar2.Location = new System.Drawing.Point(11, 413);
             this.btnAceptar2.Margin = new System.Windows.Forms.Padding(2);
             this.btnAceptar2.Name = "btnAceptar2";
             this.btnAceptar2.Size = new System.Drawing.Size(299, 34);
