@@ -21,9 +21,13 @@ namespace Monitoreo
             InitializeComponent();
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
+            btnUpdate.Enabled = false;
         }
         private void btnAceptar2_Click(object sender, EventArgs e)
         {
+            DateTime dateTime = new DateTime();
+            dateTime = DateTime.Now;
+            lbFecha.Text = $"Ultima actualizacion: {dateTime}";
             MessageBoxIcon icon = MessageBoxIcon.Information;
             MessageBoxButtons buttons = MessageBoxButtons.OK;
             string message = "Esto podria demorar uno o mas minutos, por favor espere...";
@@ -135,12 +139,12 @@ namespace Monitoreo
             }
 
             MessageBox.Show(message2, caption2, buttons, icon);
-
+            btnUpdate.Enabled = true;
             btnAceptar2.Enabled = false;
-            timer1.Start();
         }
         private void btnLimpiar2_Click(object sender, EventArgs e)
         {
+            lbFecha.Text = "Ultima actualizacion:";
             TepozotlanCB.Checked = false;
             JorobasCB.Checked = false;
             PotitlanCB.Checked = false;
@@ -153,13 +157,11 @@ namespace Monitoreo
             SalamancaCB.Checked = false;
 
             dataGridView1.Rows.Clear();
-            timer1.Stop();
-
+            btnUpdate.Enabled = false;
             btnAceptar2.Enabled = true;
         }
         private void btnList_Click_1(object sender, EventArgs e)
         {
-            timer1.Stop();
             this.Hide();
             MexicoAca mexicoAca = new MexicoAca();
             mexicoAca.Show();
@@ -177,14 +179,56 @@ namespace Monitoreo
             if (result == System.Windows.Forms.DialogResult.Yes)
             {
                 Application.Exit();
-                timer1.Stop();
             }            
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
+            if (this.dataGridView1.Columns[e.ColumnIndex].Name == "lstabintDGV")  //Si es la columna a evaluar
+            {
+                if (e.Value.ToString().Contains("Desactualizada"))   //Si el valor de la celda contiene la palabra hora
+                {
+                    e.CellStyle.BackColor = Color.LightYellow;
+                }
+                else if (e.Value.ToString().Contains("Sin conexion"))
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
+                else if (e.Value.ToString().Contains("No se encontro la ruta"))
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
+                else if (e.Value.ToString().Contains("No hay lista"))
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
+            }
+            else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "webServiceDGV")//Si es la columna a evaluar
+            {
+                if (e.Value.ToString().Contains("Sin conexion"))   //Si el valor de la celda contiene la palabra hora
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
+                else if (e.Value.ToString().Contains("SQL no visible"))  //Si el valor de la celda contiene la palabra hora");
+                {
+                    e.CellStyle.BackColor = Color.OrangeRed;
+                }
+            }
+        }
+
+        private void btnMonitoreo_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            BusquedaTag busqueda = new BusquedaTag();
+            busqueda.Show();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            DateTime dateTime = new DateTime();
+            dateTime = DateTime.Now;
+            lbFecha.Text = $"Ultima actualizacion: {dateTime}";
             dataGridView1.Rows.Clear();
-    
+
             PrincipalIra principal = new PrincipalIra();
             bool Tepozotlan2 = false;
             bool Jorobas2 = false;
@@ -237,7 +281,7 @@ namespace Monitoreo
             {
                 Salamanca2 = true;
             }
-          
+
             principal.PrincipalF(Tepozotlan2, Jorobas2, Polotitlan2, Palmillas2, Chichemequillas2, Queretaro2, Libramiento2, VillaGrande2, CerroGordo2, Salamanca2);
 
             List<string[]> list = new List<string[]>();
@@ -289,39 +333,6 @@ namespace Monitoreo
             }
 
             btnAceptar2.Enabled = false;
-        }
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (this.dataGridView1.Columns[e.ColumnIndex].Name == "lstabintDGV")  //Si es la columna a evaluar
-            {
-                if (e.Value.ToString().Contains("Desactualizada"))   //Si el valor de la celda contiene la palabra hora
-                {
-                    e.CellStyle.BackColor = Color.LightYellow;
-                }
-                else if (e.Value.ToString().Contains("Sin conexion"))
-                {
-                    e.CellStyle.BackColor = Color.OrangeRed;
-                }
-                else if (e.Value.ToString().Contains("No se encontro la ruta"))
-                {
-                    e.CellStyle.BackColor = Color.OrangeRed;
-                }
-                else if (e.Value.ToString().Contains("No hay lista"))
-                {
-                    e.CellStyle.BackColor = Color.OrangeRed;
-                }
-            }
-            else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "webServiceDGV")//Si es la columna a evaluar
-            {
-                if (e.Value.ToString().Contains("Sin conexion"))   //Si el valor de la celda contiene la palabra hora
-                {
-                    e.CellStyle.BackColor = Color.OrangeRed;
-                }
-                else if (e.Value.ToString().Contains("SQL no visible"))  //Si el valor de la celda contiene la palabra hora");
-                {
-                    e.CellStyle.BackColor = Color.OrangeRed;
-                }
-            }
         }
     }
 }

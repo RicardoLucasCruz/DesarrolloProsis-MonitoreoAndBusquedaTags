@@ -69,6 +69,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusquedaTag.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BusquedaTag.Designer.cs">
+      <DependentUpon>BusquedaTag.cs</DependentUpon>
+    </Compile>
     <Compile Include="Metodos\Flag.cs" />
     <Compile Include="MexAca\PrincipalAca.cs" />
     <Compile Include="MexicoIra.cs">
@@ -88,6 +94,9 @@
     <Compile Include="MexIra\PrincipalIra.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="BusquedaTag.resx">
+      <DependentUpon>BusquedaTag.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MexicoAca.resx">
       <DependentUpon>MexicoAca.cs</DependentUpon>
     </EmbeddedResource>

@@ -56,3 +56,5 @@ C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusqueda
 C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CopyComplete
 C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe
 C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.pdb
+C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.BusquedaTag.resources
+C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.BusquedaTag.resources
