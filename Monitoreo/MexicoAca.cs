@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -42,22 +43,23 @@ namespace Monitoreo
             }
         }
 
-        private void btnAceptar2_Click(object sender, EventArgs e)
+        private async void btnAceptar2_Click(object sender, EventArgs e)
         {
-            DateTime dateTime = new DateTime();
-            dateTime = DateTime.Now;
-            lbFecha.Text = $"Ultima actualizacion: {dateTime}";
-            MessageBoxIcon icon = MessageBoxIcon.Information;
-            MessageBoxButtons buttons = MessageBoxButtons.OK;
-            string message = "Esto podria demorar uno o mas minutos, por favor espere...";
-            string caption = "Cargando...";
+            Loading loading = new Loading();
+            loading.Show();
 
-            MessageBox.Show(message, caption, buttons, icon);
+            Task task = new Task(BotonAceptar);
+            task.Start();
+            await task;
 
-            string message2 = "Carga completa, gracias por la espera.";
-            string caption2 = "Completado";
+            loading.Hide();
+        }
+        public void BotonAceptar()
+        {
+            CheckForIllegalCrossThreadCalls = false;
 
             PrincipalAca principal = new PrincipalAca();
+
             bool Alpuyeca = false;
             bool PasoMorelos = false;
             bool PaloBlanco = false;
@@ -70,15 +72,15 @@ namespace Monitoreo
             bool FrancisciVelazco = false;
 
             if (AlpuyecaCB.Checked == true)
-            {
+            {                
                 Alpuyeca = true;
             }
             if (PasoMorelosCB.Checked == true)
-            {
+            {                
                 PasoMorelos = true;
             }
             if (PaloBlancoCB.Checked == true)
-            {
+            {                
                 PaloBlanco = true;
             }
             if (LaVentaCB.Checked == true)
@@ -86,29 +88,44 @@ namespace Monitoreo
                 LaVenta = true;
             }
             if (XochitepecCB.Checked == true)
-            {
+            {                
                 Xochitepec = true;
             }
             if (AeropuertoCB.Checked == true)
-            {
+            {                
                 Aeropuerto = true;
             }
             if (EmilianoZapataCB.Checked == true)
-            {
+            {                
                 EmilianoZapata = true;
             }
             if (TlalpanCB.Checked == true)
-            {
+            {                
                 Tlalpan = true;
             }
             if (TresMariasCB.Checked == true)
-            {
+            {               
                 TresMarias = true;
             }
             if (FranciscoVelazcoCB.Checked == true)
-            {
+            {                
                 FrancisciVelazco = true;
             }
+
+            EmilianoZapataCB.Enabled = false;
+            AeropuertoCB.Enabled = false;
+            XochitepecCB.Enabled = false;
+            PaloBlancoCB.Enabled = false;
+            PasoMorelosCB.Enabled = false;
+            AlpuyecaCB.Enabled = false;
+            TlalpanCB.Enabled = false;
+            TresMariasCB.Enabled = false;
+            LaVentaCB.Enabled = false;
+            FranciscoVelazcoCB.Enabled = false;
+
+            DateTime dateTime = new DateTime();
+            dateTime = DateTime.Now;
+            lbFecha.Text = $"Ultima actualizacion: {dateTime}";
 
             principal.PrincipalF(Alpuyeca, PasoMorelos, PaloBlanco, LaVenta, Xochitepec, Aeropuerto, EmilianoZapata, Tlalpan, TresMarias, FrancisciVelazco);
 
@@ -160,7 +177,6 @@ namespace Monitoreo
                 dataGridView1.Rows.Add(item);
             }
 
-            MessageBox.Show(message2, caption2, buttons, icon);
             btnAceptar2.Enabled = false;
             btnUpdate.Enabled = true;
         }
@@ -178,6 +194,17 @@ namespace Monitoreo
             TlalpanCB.Checked = false;
             TresMariasCB.Checked = false;
             FranciscoVelazcoCB.Checked = false;
+
+            AlpuyecaCB.Enabled = true;
+            PasoMorelosCB.Enabled = true;
+            PaloBlancoCB.Enabled = true;
+            LaVentaCB.Enabled = true;
+            XochitepecCB.Enabled = true;
+            AeropuertoCB.Enabled = true;
+            EmilianoZapataCB.Enabled = true;
+            TlalpanCB.Enabled = true;
+            TresMariasCB.Enabled = true;
+            FranciscoVelazcoCB.Enabled = true;
 
             dataGridView1.Rows.Clear();
             btnUpdate.Enabled = false;
@@ -225,8 +252,22 @@ namespace Monitoreo
             busqueda.Show();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private async void btnUpdate_Click(object sender, EventArgs e)
         {
+            Loading loading = new Loading();
+            loading.Show();
+
+            Task task = new Task(BotonActualizar);
+            task.Start();
+            await task;
+
+            loading.Hide();
+        }
+
+        public void BotonActualizar()
+        {
+            CheckForIllegalCrossThreadCalls = false;
+
             DateTime dateTime = new DateTime();
             dateTime = DateTime.Now;
             lbFecha.Text = $"Ultima actualizacion: {dateTime}";

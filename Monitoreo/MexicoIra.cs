@@ -23,18 +23,24 @@ namespace Monitoreo
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             btnUpdate.Enabled = false;
         }
-        private void btnAceptar2_Click(object sender, EventArgs e)
+        private async void btnAceptar2_Click(object sender, EventArgs e)
         {
+            Loading loading = new Loading();
+            loading.Show();
+
+            Task task = new Task(BotonAceptar);
+            task.Start();
+            await task;
+
+            loading.Hide ();
+        }
+        public void BotonAceptar()
+        {
+            CheckForIllegalCrossThreadCalls = false;
+
             DateTime dateTime = new DateTime();
             dateTime = DateTime.Now;
             lbFecha.Text = $"Ultima actualizacion: {dateTime}";
-            MessageBoxIcon icon = MessageBoxIcon.Information;
-            MessageBoxButtons buttons = MessageBoxButtons.OK;
-            string message = "Esto podria demorar uno o mas minutos, por favor espere...";
-            string caption = "Cargando...";
-
-            string message2 = "Carga completa, gracias por la espera.";
-            string caption2 = "Completado";
 
             PrincipalIra principal = new PrincipalIra();
             bool Tepozotlan2 = false;
@@ -88,7 +94,18 @@ namespace Monitoreo
             {
                 Salamanca2 = true;
             }
-            MessageBox.Show(message, caption, buttons, icon);
+
+            TepozotlanCB.Enabled = false;
+            JorobasCB.Enabled = false;
+            PotitlanCB.Enabled = false;
+            PalmillasCB.Enabled = false;
+            ChichemequillasCB.Enabled = false;
+            QueretaroCB.Enabled = false;
+            LibramientoCB.Enabled = false;
+            VillaGrandeCB.Enabled = false;
+            CerroGordoCB.Enabled = false;
+            SalamancaCB.Enabled = false;
+
             principal.PrincipalF(Tepozotlan2, Jorobas2, Polotitlan2, Palmillas2, Chichemequillas2, Queretaro2, Libramiento2, VillaGrande2, CerroGordo2, Salamanca2);
 
             List<string[]> list = new List<string[]>();
@@ -138,7 +155,6 @@ namespace Monitoreo
                 dataGridView1.Rows.Add(item);
             }
 
-            MessageBox.Show(message2, caption2, buttons, icon);
             btnUpdate.Enabled = true;
             btnAceptar2.Enabled = false;
         }
@@ -155,6 +171,17 @@ namespace Monitoreo
             VillaGrandeCB.Checked = false;
             CerroGordoCB.Checked = false;
             SalamancaCB.Checked = false;
+
+            TepozotlanCB.Enabled = true;
+            JorobasCB.Enabled = true;
+            PotitlanCB.Enabled = true;
+            PalmillasCB.Enabled = true;
+            ChichemequillasCB.Enabled = true;
+            QueretaroCB.Enabled = true;
+            LibramientoCB.Enabled = true;
+            VillaGrandeCB.Enabled = true;
+            CerroGordoCB.Enabled = true;
+            SalamancaCB.Enabled = true;
 
             dataGridView1.Rows.Clear();
             btnUpdate.Enabled = false;
@@ -222,8 +249,21 @@ namespace Monitoreo
             busqueda.Show();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private async void btnUpdate_Click(object sender, EventArgs e)
         {
+            Loading loading = new Loading();
+            loading.Show();
+
+            Task task = new Task(BotonActualizar);
+            task.Start();
+            await task;
+
+            loading.Hide();
+        }       
+        public void BotonActualizar()
+        {
+            CheckForIllegalCrossThreadCalls = false;
+
             DateTime dateTime = new DateTime();
             dateTime = DateTime.Now;
             lbFecha.Text = $"Ultima actualizacion: {dateTime}";

@@ -203,7 +203,7 @@ namespace Monitoreo
                }
                conn.Close();
            }
-           catch (Exception ex)
+           catch (Exception )
            {
 
                throw;

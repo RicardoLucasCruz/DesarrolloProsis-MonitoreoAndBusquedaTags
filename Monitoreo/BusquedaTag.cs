@@ -109,8 +109,21 @@ namespace Monitoreo
             txtEstatus.BackColor = Color.White;
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private async void btnBuscar_Click(object sender, EventArgs e)
         {
+            Loading loading = new Loading();
+            loading.Show();
+
+            Task task = new Task(BotonBuscar);
+            task.Start();
+            await task;
+
+            loading.Hide();
+        }
+        public void BotonBuscar()
+        {
+            CheckForIllegalCrossThreadCalls = false;
+
             string tag = txtTagBuscar.Text;
 
             if (tag == "")
@@ -186,7 +199,6 @@ namespace Monitoreo
                 }
             }
         }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtTagBuscar.Text = "";

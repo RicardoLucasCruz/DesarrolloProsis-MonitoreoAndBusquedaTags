@@ -310,7 +310,7 @@ namespace Monitoreo
             }
             if (LaVenta)
             {
-                //Palmillas
+                //La venta
                 var LaVappSettings = ConfigurationManager.AppSettings["LaVentaIP"];
                 var LaVappSettingsR = ConfigurationManager.AppSettings["LaVentaRuta"];
                 LaVentaLS = getLSTABINT(LaVappSettings, LaVappSettingsR, B_LaV_Serv, B_LSTABINT_LaV);
@@ -670,7 +670,7 @@ namespace Monitoreo
             EmilianoZapataP = new string[] { "Emiliano Zapata", EmilianoZapataLS + Environment.NewLine + EmilianoZapataTamaño, Ult_WS_Em };
             TlalpanP = new string[] { "Tlalpan", TlalpanLS + Environment.NewLine + TlalpanTamaño, Ult_WS_Tl };
             TresMariasP = new string[] { "Tres Marias", TresMariasLS + Environment.NewLine + TresMariasTamaño, Ult_WS_Tr };
-            FranciscoVelazcoP = new string[] { "Salamanca", FranciscoVelazcoLS + Environment.NewLine + FranciscoVelazcoTamaño, Ult_WS_FrV };
+            FranciscoVelazcoP = new string[] { "Francisco Velazco", FranciscoVelazcoLS + Environment.NewLine + FranciscoVelazcoTamaño, Ult_WS_FrV };
         }
         /// <summary>
         /// Obtengo el nombre, extencion, fecha de creacion de la lista lstabint deseada

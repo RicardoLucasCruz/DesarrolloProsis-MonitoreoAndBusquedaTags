@@ -763,7 +763,7 @@ namespace Monitoreo
 
                     return Res;
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
                     Res = "No se encontro la ruta";
                     return Res;
