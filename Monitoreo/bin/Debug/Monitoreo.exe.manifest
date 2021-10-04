@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoreo.exe" size="548896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoreo.exe" size="550432">
       <assemblyIdentity name="Monitoreo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+TKgeKaG0QpnzZpGU+jGAtgUshmghyzFWuVTO6Dy/uU=</dsig:DigestValue>
+        <dsig:DigestValue>iYsjPgXIld6+9+fVCeTX7/10Z6Au0vzlIfhdnaceHPo=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
