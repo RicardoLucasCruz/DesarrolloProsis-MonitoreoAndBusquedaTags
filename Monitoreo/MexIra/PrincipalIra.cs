@@ -773,11 +773,7 @@ namespace Monitoreo
 
                     return Res;
                 }
-<<<<<<< HEAD
                 catch (Exception)
-=======
-                catch (Exception )
->>>>>>> origin
                 {
                     try
                     {
@@ -882,93 +878,45 @@ namespace Monitoreo
             int VarNum;
             DirectoryInfo directory = new DirectoryInfo($@"{IP}\\PARAM\\ACTUEL\\");
 
-            try
+            if (Bandera == true)
             {
-                if (Bandera == true)
-                {
-                    FileInfo[] fiArr = directory.GetFiles();
+                FileInfo[] fiArr = directory.GetFiles();
 
-                    foreach (FileInfo item in fiArr)
+                foreach (FileInfo item in fiArr)
+                {
+                    if (Nombre.Contains(item.Name))
                     {
-                        if (Nombre.Contains(item.Name))
+                        if (item.Length < 1048576)
                         {
-                            if (item.Length < 1048576)
+                            Variable = (item.Length / 1024).ToString("###0") + "KB";
+                        }
+                        else
+                        {
+                            VarNum = Convert.ToInt32((item.Length / 1024) / 1024);
+
+                            if (VarNum < 200)
                             {
-                                Variable = (item.Length / 1024).ToString("###0") + "KB";
+                                Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB" + System.Environment.NewLine + "Lista pequeña";
+
+                                if (Bandera == true)
+                                {
+                                    Metodos.InsertLog(IP, 600);
+                                    StatusSizeChange = true;
+                                }
                             }
                             else
                             {
-                                VarNum = Convert.ToInt32((item.Length / 1024) / 1024);
+                                Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB";
 
-                                if (VarNum < 200)
+                                if (Bandera == false)
                                 {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB" + System.Environment.NewLine + "Lista pequeña";
-
-                                    if (Bandera == true)
-                                    {
-                                        Metodos.InsertLog(IP, 600);
-                                        StatusSizeChange = true;
-                                    }
-                                }
-                                else
-                                {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB";
-
-                                    if (Bandera == false)
-                                    {
-                                        Metodos.InsertLog(IP, 601);
-                                        StatusSizeChange = true;
-                                    }
+                                    Metodos.InsertLog(IP, 601);
+                                    StatusSizeChange = true;
                                 }
                             }
                         }
                     }
                 }
-            }
-            catch (Exception)
-            {
-                DirectoryInfo directory2 = new DirectoryInfo($@"{IP}\PARAM\ACTUEL\");
-                if (Bandera == true)
-                {
-                    FileInfo[] fiArr = directory2.GetFiles();
-
-                    foreach (FileInfo item in fiArr)
-                    {
-                        if (Nombre.Contains(item.Name))
-                        {
-                            if (item.Length < 1048576)
-                            {
-                                Variable = (item.Length / 1024).ToString("###0") + "KB";
-                            }
-                            else
-                            {
-                                VarNum = Convert.ToInt32((item.Length / 1024) / 1024);
-
-                                if (VarNum < 200)
-                                {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB" + System.Environment.NewLine + "Lista pequeña";
-
-                                    if (Bandera == true)
-                                    {
-                                        Metodos.InsertLog(IP, 600);
-                                        StatusSizeChange = true;
-                                    }
-                                }
-                                else
-                                {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB";
-
-                                    if (Bandera == false)
-                                    {
-                                        Metodos.InsertLog(IP, 601);
-                                        StatusSizeChange = true;
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-                throw;
             }
 
             return Variable;

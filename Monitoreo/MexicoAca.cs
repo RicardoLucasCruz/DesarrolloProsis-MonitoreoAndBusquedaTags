@@ -49,7 +49,6 @@ namespace Monitoreo
         }
 
         private async void btnAceptar2_Click(object sender, EventArgs e)
-<<<<<<< HEAD
         {
             timer1.Start();
             Loading loading = new Loading();
@@ -248,19 +247,11 @@ namespace Monitoreo
             loading.Show();
 
             Task task = new Task(BotonActualizar);
-=======
-        {
-            Loading loading = new Loading();
-            loading.Show();
-
-            Task task = new Task(BotonAceptar);
->>>>>>> origin
             task.Start();
             await task;
 
             loading.Hide();
         }
-<<<<<<< HEAD
 
         public void BotonActualizar()
         {            
@@ -270,14 +261,8 @@ namespace Monitoreo
             dateTime = DateTime.Now;
             lbFecha.Text = $"Ultima actualizacion: {dateTime}";
             dataGridView1.Rows.Clear();
-=======
-        public void BotonAceptar()
-        {
-            CheckForIllegalCrossThreadCalls = false;
->>>>>>> origin
 
             PrincipalAca principal = new PrincipalAca();
-
             bool Alpuyeca = false;
             bool PasoMorelos = false;
             bool PaloBlanco = false;
@@ -290,15 +275,15 @@ namespace Monitoreo
             bool FrancisciVelazco = false;
 
             if (AlpuyecaCB.Checked == true)
-            {                
+            {
                 Alpuyeca = true;
             }
             if (PasoMorelosCB.Checked == true)
-            {                
+            {
                 PasoMorelos = true;
             }
             if (PaloBlancoCB.Checked == true)
-            {                
+            {
                 PaloBlanco = true;
             }
             if (LaVentaCB.Checked == true)
@@ -306,44 +291,29 @@ namespace Monitoreo
                 LaVenta = true;
             }
             if (XochitepecCB.Checked == true)
-            {                
+            {
                 Xochitepec = true;
             }
             if (AeropuertoCB.Checked == true)
-            {                
+            {
                 Aeropuerto = true;
             }
             if (EmilianoZapataCB.Checked == true)
-            {                
+            {
                 EmilianoZapata = true;
             }
             if (TlalpanCB.Checked == true)
-            {                
+            {
                 Tlalpan = true;
             }
             if (TresMariasCB.Checked == true)
-            {               
+            {
                 TresMarias = true;
             }
             if (FranciscoVelazcoCB.Checked == true)
-            {                
+            {
                 FrancisciVelazco = true;
             }
-
-            EmilianoZapataCB.Enabled = false;
-            AeropuertoCB.Enabled = false;
-            XochitepecCB.Enabled = false;
-            PaloBlancoCB.Enabled = false;
-            PasoMorelosCB.Enabled = false;
-            AlpuyecaCB.Enabled = false;
-            TlalpanCB.Enabled = false;
-            TresMariasCB.Enabled = false;
-            LaVentaCB.Enabled = false;
-            FranciscoVelazcoCB.Enabled = false;
-
-            DateTime dateTime = new DateTime();
-            dateTime = DateTime.Now;
-            lbFecha.Text = $"Ultima actualizacion: {dateTime}";
 
             principal.PrincipalF(Alpuyeca, PasoMorelos, PaloBlanco, LaVenta, Xochitepec, Aeropuerto, EmilianoZapata, Tlalpan, TresMarias, FrancisciVelazco);
 
@@ -398,41 +368,7 @@ namespace Monitoreo
             btnAceptar2.Enabled = false;
         }
 
-<<<<<<< HEAD
         private void dataGridView1_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
-=======
-        private void btnLimpiar2_Click(object sender, EventArgs e)
-        {
-            lbFecha.Text = "Ultima actualizacion:";
-            AlpuyecaCB.Checked = false;
-            PasoMorelosCB.Checked = false;
-            PaloBlancoCB.Checked = false;
-            LaVentaCB.Checked = false;
-            XochitepecCB.Checked = false;
-            AeropuertoCB.Checked = false;
-            EmilianoZapataCB.Checked = false;
-            TlalpanCB.Checked = false;
-            TresMariasCB.Checked = false;
-            FranciscoVelazcoCB.Checked = false;
-
-            AlpuyecaCB.Enabled = true;
-            PasoMorelosCB.Enabled = true;
-            PaloBlancoCB.Enabled = true;
-            LaVentaCB.Enabled = true;
-            XochitepecCB.Enabled = true;
-            AeropuertoCB.Enabled = true;
-            EmilianoZapataCB.Enabled = true;
-            TlalpanCB.Enabled = true;
-            TresMariasCB.Enabled = true;
-            FranciscoVelazcoCB.Enabled = true;
-
-            dataGridView1.Rows.Clear();
-            btnUpdate.Enabled = false;
-            btnAceptar2.Enabled = true;
-        }
-
-        private void dataGridView1_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
->>>>>>> origin
         {
             if (this.dataGridView1.Columns[e.ColumnIndex].Name == "lstabintDGV")  //Si es la columna a evaluar
             {
@@ -471,32 +407,9 @@ namespace Monitoreo
             panel2.Location = new Point(10, 140);
             panel1.Location = new Point(983, 144);
 
-<<<<<<< HEAD
             PaletaColores.ElegirTema("Defecto");
             tableLayoutPanel3.BackColor = PaletaColores.titulos;
             tableLayoutPanel5.BackColor = PaletaColores.titulos;
-=======
-        private async void btnUpdate_Click(object sender, EventArgs e)
-        {
-            Loading loading = new Loading();
-            loading.Show();
-
-            Task task = new Task(BotonActualizar);
-            task.Start();
-            await task;
-
-            loading.Hide();
-        }
-
-        public void BotonActualizar()
-        {
-            CheckForIllegalCrossThreadCalls = false;
-
-            DateTime dateTime = new DateTime();
-            dateTime = DateTime.Now;
-            lbFecha.Text = $"Ultima actualizacion: {dateTime}";
-            dataGridView1.Rows.Clear();
->>>>>>> origin
 
             panel1.BackColor = PaletaColores.panelFondos;
             panel2.BackColor = PaletaColores.panelFondos;

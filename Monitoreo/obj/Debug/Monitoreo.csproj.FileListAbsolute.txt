@@ -43,24 +43,16 @@ C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusqueda
 C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe
 C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.pdb
 C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.BusquedaTag.resources
-<<<<<<< HEAD
 C:\Users\Rodrigo\Desktop\Pruebas Monitoreo\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.Loading.resources
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe.config
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe.manifest
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.application
-=======
-C:\Users\Desarrollo_Mike\Desktop\RichiLucas\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.Loading.resources
-C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe.config
->>>>>>> origin
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.exe
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\Monitoreo.pdb
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\System.Data.SqlClient.dll
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\UserImpersonation.dll
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\bin\Debug\System.Data.SqlClient.xml
-<<<<<<< HEAD
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.AssemblyReference.cache
-=======
->>>>>>> origin
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.BusquedaTag.resources
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.Loading.resources
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.MexicoAca.resources
@@ -68,7 +60,6 @@ C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\D
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.Properties.Resources.resources
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.GenerateResource.cache
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CoreCompileInputs.cache
-<<<<<<< HEAD
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe.manifest
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.application
 C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CopyComplete
@@ -165,9 +156,3 @@ C:\Users\Dzwk1\Desktop\Prosis\DesarrolloProsis-MonitoreoAndBusquedaTags\Desarrol
 C:\Users\Dzwk1\Desktop\Prosis\DesarrolloProsis-MonitoreoAndBusquedaTags\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CopyComplete
 C:\Users\Dzwk1\Desktop\Prosis\DesarrolloProsis-MonitoreoAndBusquedaTags\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe
 C:\Users\Dzwk1\Desktop\Prosis\DesarrolloProsis-MonitoreoAndBusquedaTags\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.pdb
-=======
-C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.CopyComplete
-C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.exe
-C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.pdb
-C:\Users\Dzwk1\Desktop\DesarrolloProsis-MonitoreoAndBusquedaTags\Monitoreo\obj\Debug\Monitoreo.csproj.AssemblyReference.cache
->>>>>>> origin

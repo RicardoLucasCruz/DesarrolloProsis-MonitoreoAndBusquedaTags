@@ -23,36 +23,18 @@ namespace Monitoreo
             dataGridView1.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             btnUpdate.Enabled = false;
         }
-<<<<<<< HEAD
 
         public int contador = 0;
 
         private async void btnAceptar2_Click(object sender, EventArgs e)
         {
             timer1.Enabled = true;
-=======
-        private async void btnAceptar2_Click(object sender, EventArgs e)
-        {
->>>>>>> origin
             Loading loading = new Loading();
             loading.Show();
 
             Task task = new Task(BotonAceptar);
             task.Start();
             await task;
-<<<<<<< HEAD
-=======
-
-            loading.Hide ();
-        }
-        public void BotonAceptar()
-        {
-            CheckForIllegalCrossThreadCalls = false;
-
-            DateTime dateTime = new DateTime();
-            dateTime = DateTime.Now;
-            lbFecha.Text = $"Ultima actualizacion: {dateTime}";
->>>>>>> origin
 
             loading.Hide ();
         }
@@ -62,57 +44,7 @@ namespace Monitoreo
 
             if (flags.Count != 0)
             {
-<<<<<<< HEAD
                 CheckForIllegalCrossThreadCalls = false;
-=======
-                Jorobas2 = true;
-            }
-            if (PotitlanCB.Checked == true)
-            {
-                Polotitlan2 = true;
-            }
-            if (PalmillasCB.Checked == true)
-            {
-                Palmillas2 = true;
-            }
-            if (ChichemequillasCB.Checked == true)
-            {
-                Chichemequillas2 = true;
-            }
-            if (QueretaroCB.Checked == true)
-            {
-                Queretaro2 = true;
-            }
-            if (LibramientoCB.Checked == true)
-            {
-                Libramiento2 = true;
-            }
-            if (VillaGrandeCB.Checked == true)
-            {
-                VillaGrande2 = true;
-            }
-            if (CerroGordoCB.Checked == true)
-            {
-                CerroGordo2 = true;
-            }
-            if (SalamancaCB.Checked == true)
-            {
-                Salamanca2 = true;
-            }
-
-            TepozotlanCB.Enabled = false;
-            JorobasCB.Enabled = false;
-            PotitlanCB.Enabled = false;
-            PalmillasCB.Enabled = false;
-            ChichemequillasCB.Enabled = false;
-            QueretaroCB.Enabled = false;
-            LibramientoCB.Enabled = false;
-            VillaGrandeCB.Enabled = false;
-            CerroGordoCB.Enabled = false;
-            SalamancaCB.Enabled = false;
-
-            principal.PrincipalF(Tepozotlan2, Jorobas2, Polotitlan2, Palmillas2, Chichemequillas2, Queretaro2, Libramiento2, VillaGrande2, CerroGordo2, Salamanca2);
->>>>>>> origin
 
                 DateTime dateTime = new DateTime();
                 dateTime = DateTime.Now;
@@ -242,12 +174,6 @@ namespace Monitoreo
                 string caption = "¡Alerta!";
                 MessageBox.Show(message, caption, buttons, icon);
             }
-<<<<<<< HEAD
-=======
-
-            btnUpdate.Enabled = true;
-            btnAceptar2.Enabled = false;
->>>>>>> origin
         }
         private void btnLimpiar2_Click(object sender, EventArgs e)
         {
@@ -312,7 +238,6 @@ namespace Monitoreo
         }
 
         private async void btnUpdate_Click(object sender, EventArgs e)
-<<<<<<< HEAD
         {
             timer1.Start();
             contador = 0;
@@ -327,20 +252,6 @@ namespace Monitoreo
         }       
         public void BotonActualizar()
         {
-=======
-        {
-            Loading loading = new Loading();
-            loading.Show();
-
-            Task task = new Task(BotonActualizar);
-            task.Start();
-            await task;
-
-            loading.Hide();
-        }       
-        public void BotonActualizar()
-        {
->>>>>>> origin
             CheckForIllegalCrossThreadCalls = false;
 
             DateTime dateTime = new DateTime();

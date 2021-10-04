@@ -33,23 +33,8 @@ namespace Monitoreo
             }
             catch (Exception)
             {
-                try
-                {
-                    string[] Directorio = Directory.GetFiles($@"{Ruta}\PARAM\ACTUEL\");
-
-                    foreach (var item in Directorio)
-                    {
-                        if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
-                        {
-                            return Variable = item.Substring(item.Length - 12, 12);
-                        }
-                    }
-                }
-                catch (Exception)
-                {
-                    return Variable = "Sin conexion, o ruta no encontrada";
-                    throw;
-                }
+                return Variable = "Sin conexion, o ruta no encontrada";
+                throw;
             }
 
             return Variable;
@@ -108,35 +93,27 @@ namespace Monitoreo
         {
             //Intancia de un objeto de la clase UserImpersonation para obtener el permiso de entrar a la carpeta compartida
             //UserImpersonation user = new UserImpersonation("Administrador", "10.1.1.87", "Cz1GvqqWR3");
-            try
+            string[] Directorio = Directory.GetFiles($@"{IP}\\PARAM\\ACTUEL\\");
+
+            foreach (var item in Directorio)
             {
-                string[] Directorio = Directory.GetFiles($@"{IP}\\PARAM\\ACTUEL\\");
-
-                foreach (var item in Directorio)
+                if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
                 {
-                    if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
-                    {
-                        return item.Substring(item.Length - 12, 12);
-                    }
+                    return item.Substring(item.Length - 12, 12);
                 }
-
-                return "";
             }
-            catch (Exception)
+
+            string[] Directorio2 = Directory.GetFiles($@"{IP}\PARAM\ACTUEL\");
+
+            foreach (var item in Directorio2)
             {
-                string[] Directorio2 = Directory.GetFiles($@"{IP}\PARAM\ACTUEL\");
-
-                foreach (var item in Directorio2)
+                if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
                 {
-                    if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
-                    {
-                        return item.Substring(item.Length - 12, 12);
-                    }
+                    return item.Substring(item.Length - 12, 12);
                 }
+            }
 
-                return "";
-                throw;
-            }           
+            return "";
         }
         /// <summary>
         /// Metodo que hace actualizaciones a la bandera de esa plaza dependiendo de el codigo que se le mande
