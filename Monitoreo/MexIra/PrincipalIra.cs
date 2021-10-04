@@ -773,7 +773,11 @@ namespace Monitoreo
 
                     return Res;
                 }
+<<<<<<< HEAD
                 catch (Exception)
+=======
+                catch (Exception )
+>>>>>>> origin
                 {
                     try
                     {

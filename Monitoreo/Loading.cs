@@ -16,10 +16,13 @@ namespace Monitoreo
         {
             InitializeComponent();
         }
+<<<<<<< HEAD
 
         private void Loading_Load(object sender, EventArgs e)
         {
             PbLoading.Location = new Point(this.Width / 2 - PbLoading.Width / 2, this.Height / 2 - PbLoading.Height / 2);
         }
+=======
+>>>>>>> origin
     }
 }

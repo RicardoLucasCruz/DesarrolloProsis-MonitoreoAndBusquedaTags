@@ -2,6 +2,7 @@
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
     <ProjectView>ProjectFiles</ProjectView>
+<<<<<<< HEAD
     <PublishUrlHistory />
     <InstallUrlHistory />
     <SupportUrlHistory />
@@ -13,5 +14,7 @@
   </PropertyGroup>
   <PropertyGroup>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
+=======
+>>>>>>> origin
   </PropertyGroup>
 </Project>

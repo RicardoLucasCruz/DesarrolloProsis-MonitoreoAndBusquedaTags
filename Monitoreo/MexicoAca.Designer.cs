@@ -65,7 +65,10 @@
             this.plazaDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lstabintDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.webServiceDGV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+=======
+>>>>>>> origin
             this.tableLayoutPanel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel4.SuspendLayout();
@@ -415,10 +418,17 @@
             this.btnUpdate.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnUpdate.BackColor = System.Drawing.Color.AliceBlue;
             this.btnUpdate.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+<<<<<<< HEAD
             this.btnUpdate.Location = new System.Drawing.Point(669, 5);
             this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(297, 29);
+=======
+            this.btnUpdate.Location = new System.Drawing.Point(669, 3);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(297, 33);
+>>>>>>> origin
             this.btnUpdate.TabIndex = 17;
             this.btnUpdate.Text = "Actualizar";
             this.btnUpdate.UseVisualStyleBackColor = false;
@@ -516,11 +526,14 @@
             this.webServiceDGV.Name = "webServiceDGV";
             this.webServiceDGV.ReadOnly = true;
             // 
+<<<<<<< HEAD
             // timer1
             // 
             this.timer1.Interval = 1800000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
             // 
+=======
+>>>>>>> origin
             // MexicoAca
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);

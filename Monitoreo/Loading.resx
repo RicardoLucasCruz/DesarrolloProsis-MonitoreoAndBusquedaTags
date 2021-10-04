@@ -1616,6 +1616,7 @@
         ghjMoAY3yMEO1iYgADs=
 </value>
   </data>
+<<<<<<< HEAD
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIABlRAAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgGAAAAXHKoZgAARCxJ
@@ -1913,4 +1914,6 @@
         AAAASUVORK5CYII=
 </value>
   </data>
+=======
+>>>>>>> origin
 </root>
