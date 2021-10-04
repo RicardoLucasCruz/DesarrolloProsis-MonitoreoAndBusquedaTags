@@ -33,8 +33,23 @@ namespace Monitoreo
             }
             catch (Exception)
             {
-                return Variable = "Sin conexion, o ruta no encontrada";
-                throw;
+                try
+                {
+                    string[] Directorio = Directory.GetFiles($@"{Ruta}\PARAM\ACTUEL\\");
+
+                    foreach (var item in Directorio)
+                    {
+                        if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
+                        {
+                            return Variable = item.Substring(item.Length - 12, 12);
+                        }
+                    }
+                }
+                catch (Exception)
+                {
+                    return Variable = "Sin conexion, o ruta no encontrada";
+                    throw;
+                }
             }
 
             return Variable;
