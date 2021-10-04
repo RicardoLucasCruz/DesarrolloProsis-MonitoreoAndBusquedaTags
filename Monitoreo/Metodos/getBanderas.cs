@@ -24,7 +24,7 @@ namespace Monitoreo
                 {
                     conn.Open();
 
-                    const string sqlQuery = "select id_Flag, Conexion, LSTABINT, WS from Flag";
+                    const string sqlQuery = "select id_Flag, Conexion, LSTABINT, WS, Tamaño from Flag";
                     using (SqlCommand cmd = new SqlCommand(sqlQuery, conn))
                     {
                         SqlDataReader dataReader = cmd.ExecuteReader();
@@ -36,10 +36,11 @@ namespace Monitoreo
                                 conexion = Convert.ToBoolean(dataReader["conexion"]),
                                 LSTABINT = Convert.ToBoolean(dataReader["LSTABINT"]),
                                 WS = Convert.ToBoolean(dataReader["WS"]),
+                                tam = Convert.ToBoolean(dataReader["Tamaño"]),
                             };
                             getBanderas.Add(flag);
                         }
-                    }                    
+                    }
                     conn.Close();
                     return getBanderas;
                 }
@@ -50,38 +51,38 @@ namespace Monitoreo
                 throw;
             }
         }
-        /// <summary>
-        /// Metodo que se utiliza para traer el id de plaza mediante el ip
-        /// </summary>
-        /// <param name="IP"></param>
-        /// <param name="StringdeConexion"></param>
-        /// <returns></returns>
-        public static Flag GetByIP(string IP, string StringdeConexion)
-        {
-            SqlConnection conn = new SqlConnection(StringdeConexion);
+        ///// <summary>
+        ///// Metodo que se utiliza para traer el id de plaza mediante el ip
+        ///// </summary>
+        ///// <param name="IP"></param>
+        ///// <param name="StringdeConexion"></param>
+        ///// <returns></returns>
+        //public static Flag GetByIP(string IP, string StringdeConexion)
+        //{
+        //    SqlConnection conn = new SqlConnection(StringdeConexion);
 
-            conn.Open();
+        //    conn.Open();
 
-            const string sqlGetByUsuAlum = "select * from flag where ip = @ip";
-            using (SqlCommand cmd = new SqlCommand(sqlGetByUsuAlum, conn))
-            {
-                cmd.Parameters.AddWithValue("@ip", IP);
-                SqlDataReader dataReader = cmd.ExecuteReader();
-                if (dataReader.Read())
-                {
-                    Flag flag = new Flag
-                    {
-                        id_PLaza = Convert.ToInt32(dataReader["id_Plaza"]),
-                    };
+        //    const string sqlGetByUsuAlum = "select * from flag where ip = @ip";
+        //    using (SqlCommand cmd = new SqlCommand(sqlGetByUsuAlum, conn))
+        //    {
+        //        cmd.Parameters.AddWithValue("@ip", IP);
+        //        SqlDataReader dataReader = cmd.ExecuteReader();
+        //        if (dataReader.Read())
+        //        {
+        //            Flag flag = new Flag
+        //            {
+        //                id_PLaza = Convert.ToInt32(dataReader["id_Plaza"]),
+        //            };
 
-                    return flag;
-                }
-                else
-                {
-                    return null;
-                }
-            }
+        //            return flag;
+        //        }
+        //        else
+        //        {
+        //            return null;
+        //        }
+        //    }
 
-        }
+        //}
     }
 }

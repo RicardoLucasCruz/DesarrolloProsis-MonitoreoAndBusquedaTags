@@ -109,8 +109,21 @@ namespace Monitoreo
             txtEstatus.BackColor = Color.White;
         }
 
-        private void btnBuscar_Click(object sender, EventArgs e)
+        private async void btnBuscar_Click(object sender, EventArgs e)
         {
+            Loading loading = new Loading();
+            loading.Show();
+
+            Task task = new Task(BotonBuscar);
+            task.Start();
+            await task;
+
+            loading.Hide();
+        }
+        public void BotonBuscar()
+        {
+            CheckForIllegalCrossThreadCalls = false;
+
             string tag = txtTagBuscar.Text;
 
             if (tag == "")
@@ -186,7 +199,6 @@ namespace Monitoreo
                 }
             }
         }
-
         private void btnLimpiar_Click(object sender, EventArgs e)
         {
             txtTagBuscar.Text = "";
@@ -205,8 +217,55 @@ namespace Monitoreo
         private void btnMonitoreo_Click(object sender, EventArgs e)
         {
             this.Hide();
-            MexicoIra mexicoAca = new MexicoIra();
+            formMexicoIra mexicoAca = new formMexicoIra();
             mexicoAca.Show();
+        }
+
+        private void BusquedaTag_Load(object sender, EventArgs e)
+        {
+            panel2.Location = new Point(10, 400);
+
+            PaletaColores.ElegirTema("Defecto");
+            tableLayoutPanel3.BackColor = PaletaColores.titulos;
+            tableLayoutPanel5.BackColor = PaletaColores.titulos;
+            tableLayoutPanel1.BackColor = PaletaColores.titulos;
+            tableLayoutPanel2.BackColor = PaletaColores.titulos;
+
+            panel1.BackColor = PaletaColores.panelFondos;
+            panel2.BackColor = PaletaColores.panelFondos;
+            txtSaldo.BackColor = PaletaColores.panelFondos;
+
+            btnMonitoreo.BackColor = PaletaColores.panelBotones;
+            btnSalir.BackColor = PaletaColores.panelBotones;
+            btnAceptar.BackColor = PaletaColores.panelBotones;
+            btnLimpiarRuta.BackColor = PaletaColores.panelBotones;
+            btnLimpiar.BackColor = PaletaColores.panelBotones;
+            btnBuscar.BackColor = PaletaColores.panelBotones;
+            btnMonitoreo.FlatStyle = FlatStyle.Flat;
+            btnMonitoreo.FlatAppearance.BorderColor = Color.White;
+            btnSalir.FlatStyle = FlatStyle.Flat;
+            btnSalir.FlatAppearance.BorderColor = Color.White;
+            btnAceptar.FlatStyle = FlatStyle.Flat;
+            btnAceptar.FlatAppearance.BorderColor = Color.White;
+            btnLimpiarRuta.FlatStyle = FlatStyle.Flat;
+            btnLimpiarRuta.FlatAppearance.BorderColor = Color.White;
+            btnLimpiar.FlatStyle = FlatStyle.Flat;
+            btnLimpiar.FlatAppearance.BorderColor = Color.White;
+
+            label4.ForeColor = Color.White;
+            label2.ForeColor = Color.White;
+            label1.ForeColor = Color.White;
+            label7.ForeColor = Color.White;
+            label8.ForeColor = Color.White;
+            label9.ForeColor = Color.White;
+            panel2.ForeColor = Color.White;
+            txtSaldo.ForeColor = Color.White;
+            btnMonitoreo.ForeColor = Color.White;
+            btnSalir.ForeColor = Color.White;
+            btnAceptar.ForeColor = Color.White;
+            btnLimpiarRuta.ForeColor = Color.White;
+            btnLimpiar.ForeColor = Color.White;
+            btnBuscar.ForeColor = Color.White;
         }
     }
 }

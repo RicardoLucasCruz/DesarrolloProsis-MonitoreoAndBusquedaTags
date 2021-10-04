@@ -16,7 +16,7 @@ namespace Monitoreo
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MexicoIra());
+            Application.Run(new formMexicoIra());
         }
     }
 }

@@ -103,6 +103,16 @@ namespace Monitoreo
                 }
             }
 
+            string[] Directorio2 = Directory.GetFiles($@"{IP}\PARAM\ACTUEL\");
+
+            foreach (var item in Directorio2)
+            {
+                if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
+                {
+                    return item.Substring(item.Length - 12, 12);
+                }
+            }
+
             return "";
         }
         /// <summary>
@@ -203,7 +213,7 @@ namespace Monitoreo
                }
                conn.Close();
            }
-           catch (Exception ex)
+           catch (Exception )
            {
 
                throw;

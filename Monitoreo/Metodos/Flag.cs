@@ -14,5 +14,6 @@ namespace Monitoreo
         public bool conexion { get; set; }
         public bool LSTABINT { get; set; }
         public bool WS { get; set; }
+        public bool tam { get; set; }
     }
 }
