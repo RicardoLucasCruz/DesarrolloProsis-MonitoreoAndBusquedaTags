@@ -87,6 +87,7 @@
       <Private>True</Private>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -113,6 +114,7 @@
     <Compile Include="Loading.Designer.cs">
       <DependentUpon>Loading.cs</DependentUpon>
     </Compile>
+    <Compile Include="Metodos\Logs.cs" />
     <Compile Include="Metodos\Flag.cs" />
     <Compile Include="MexAca\PrincipalAca.cs" />
     <Compile Include="MexicoIra.cs">

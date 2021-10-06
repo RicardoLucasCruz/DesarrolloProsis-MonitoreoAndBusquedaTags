@@ -108,25 +108,37 @@ namespace Monitoreo
         {
             //Intancia de un objeto de la clase UserImpersonation para obtener el permiso de entrar a la carpeta compartida
             //UserImpersonation user = new UserImpersonation("Administrador", "10.1.1.87", "Cz1GvqqWR3");
-            string[] Directorio = Directory.GetFiles($@"{IP}\\PARAM\\ACTUEL\\");
-
-            foreach (var item in Directorio)
+            try
             {
-                if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
+                string[] Directorio = Directory.GetFiles($@"{IP}\\PARAM\\ACTUEL\\");
+
+                foreach (var item in Directorio)
                 {
-                    return item.Substring(item.Length - 12, 12);
+                    if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
+                    {
+                        return item.Substring(item.Length - 12, 12);
+                    }
                 }
             }
-
-            string[] Directorio2 = Directory.GetFiles($@"{IP}\PARAM\ACTUEL\");
-
-            foreach (var item in Directorio2)
+            catch (Exception)
             {
-                if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
+                try
                 {
-                    return item.Substring(item.Length - 12, 12);
+                    string[] Directorio2 = Directory.GetFiles($@"{IP}\PARAM\ACTUEL\");
+
+                    foreach (var item in Directorio2)
+                    {
+                        if (/*item.Substring(34, 8) */item.Contains("LSTABINT"))
+                        {
+                            return item.Substring(item.Length - 12, 12);
+                        }
+                    }
                 }
-            }
+                catch (Exception)
+                {
+                    throw;
+                }
+            }           
 
             return "";
         }
@@ -228,10 +240,9 @@ namespace Monitoreo
                }
                conn.Close();
            }
-           catch (Exception )
+           catch (Exception)
            {
-
-               throw;
+                throw;
            }
        }
     }

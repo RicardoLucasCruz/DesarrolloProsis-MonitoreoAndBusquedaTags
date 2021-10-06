@@ -675,7 +675,7 @@ namespace Monitoreo
             PasoMorelosP = new string[] { "Paso Morelos", PasoMorelosLS + Environment.NewLine + PasoMorelosTamaño, Ult_WS_PsM };
             PoloBlancoP = new string[] { "Palo Blanco", PoloBlancoLS + Environment.NewLine + PoloBlancoTamaño, Ult_WS_PoB };
             LaVentaP = new string[] { "La venta", LaVentaLS + Environment.NewLine + LaVentaTamaño, Ult_WS_LaV };
-            XochitepecP = new string[] { "Xochitepec", XochitepecLS + "\r\n" + XochitepecTamaño, Ult_WS_Xo };
+            XochitepecP = new string[] { "Xochitepec", XochitepecLS + Environment.NewLine + XochitepecTamaño, Ult_WS_Xo };
             AeropuertoP = new string[] { "Aeropuerto", AeropuertoLS + Environment.NewLine + AeropuertoTamaño, Ult_WS_Ae };
             EmilianoZapataP = new string[] { "Emiliano Zapata", EmilianoZapataLS + Environment.NewLine + EmilianoZapataTamaño, Ult_WS_Em };
             TlalpanP = new string[] { "Tlalpan", TlalpanLS + Environment.NewLine + TlalpanTamaño, Ult_WS_Tl };
@@ -845,8 +845,9 @@ namespace Monitoreo
 
                         return Res;
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        Logs.CrearArchivo(this, ex);
                         Res = "No se encontro la ruta";
                         return Res;
                         throw;
@@ -876,11 +877,12 @@ namespace Monitoreo
         private string TamañoLSTABINT(string IP, string Nombre, bool Bandera)
         {
             string Variable = "";
-            int VarNum;
-            DirectoryInfo directory = new DirectoryInfo($@"{IP}\\PARAM\\ACTUEL\\");
+            int VarNum;            
 
             try
             {
+                DirectoryInfo directory = new DirectoryInfo($@"{IP}\\PARAM\\ACTUEL\\");
+
                 if (Bandera == true)
                 {
                     FileInfo[] fiArr = directory.GetFiles();
@@ -924,49 +926,56 @@ namespace Monitoreo
             }
             catch (Exception)
             {
-                DirectoryInfo directory2 = new DirectoryInfo($@"{IP}\PARAM\ACTUEL\");
-
-                if (Bandera == true)
+                try
                 {
-                    FileInfo[] fiArr = directory2.GetFiles();
+                    DirectoryInfo directory2 = new DirectoryInfo($@"{IP}\PARAM\ACTUEL\");
 
-                    foreach (FileInfo item in fiArr)
+                    if (Bandera == true)
                     {
-                        if (Nombre.Contains(item.Name))
+                        FileInfo[] fiArr2 = directory2.GetFiles();
+
+                        foreach (FileInfo item in fiArr2)
                         {
-                            if (item.Length < 1048576)
+                            if (Nombre.Contains(item.Name))
                             {
-                                Variable = (item.Length / 1024).ToString("###0") + "KB";
-                            }
-                            else
-                            {
-                                VarNum = Convert.ToInt32((item.Length / 1024) / 1024);
-
-                                if (VarNum < 200)
+                                if (item.Length < 1048576)
                                 {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB" + System.Environment.NewLine + "Lista pequeña";
-
-                                    if (Bandera == true)
-                                    {
-                                        Metodos.InsertLog(IP, 600);
-                                        StatusSizeChange = true;
-                                    }
+                                    Variable = (item.Length / 1024).ToString("###0") + "KB";
                                 }
                                 else
                                 {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB";
+                                    VarNum = Convert.ToInt32((item.Length / 1024) / 1024);
 
-                                    if (Bandera == false)
+                                    if (VarNum < 200)
                                     {
-                                        Metodos.InsertLog(IP, 601);
-                                        StatusSizeChange = true;
+                                        Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB" + System.Environment.NewLine + "Lista pequeña";
+
+                                        if (Bandera == true)
+                                        {
+                                            Metodos.InsertLog(IP, 600);
+                                            StatusSizeChange = true;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB";
+
+                                        if (Bandera == false)
+                                        {
+                                            Metodos.InsertLog(IP, 601);
+                                            StatusSizeChange = true;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
-                throw;
+                catch (Exception ex)
+                {
+                    Logs.CrearArchivo(this, ex);
+                    throw;
+                }                
             }
 
             return Variable;
@@ -1145,8 +1154,10 @@ namespace Monitoreo
 
                         return Res;
                     }
-                    catch (Exception)
+                    catch (Exception ex)
                     {
+                        Logs.CrearArchivo(this, ex);
+
                         Res = "SQL no visible";
                         return Res;
                         throw;

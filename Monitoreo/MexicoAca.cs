@@ -241,6 +241,7 @@ namespace Monitoreo
 
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
+            timer1.Stop();
             contador = 0;
             timer1.Start();
             Loading loading = new Loading();
@@ -374,19 +375,23 @@ namespace Monitoreo
             {
                 if (e.Value.ToString().Contains("Desactualizada"))   //Si el valor de la celda contiene la palabra hora
                 {
-                    e.CellStyle.BackColor = Color.LightYellow;
+                    e.CellStyle.BackColor = Color.Yellow;
+                    e.CellStyle.ForeColor = Color.Black;
                 }
                 else if (e.Value.ToString().Contains("Sin conexion"))
                 {
                     e.CellStyle.BackColor = Color.OrangeRed;
+                    e.CellStyle.ForeColor = Color.Black;
                 }
                 else if (e.Value.ToString().Contains("No se encontro la ruta"))
                 {
                     e.CellStyle.BackColor = Color.OrangeRed;
+                    e.CellStyle.ForeColor = Color.Black;
                 }
                 else if (e.Value.ToString().Contains("No hay lista"))
                 {
                     e.CellStyle.BackColor = Color.OrangeRed;
+                    e.CellStyle.ForeColor = Color.Black;
                 }
             }
             else if (this.dataGridView1.Columns[e.ColumnIndex].Name == "webServiceDGV")//Si es la columna a evaluar
@@ -394,10 +399,17 @@ namespace Monitoreo
                 if (e.Value.ToString().Contains("Sin conexion"))   //Si el valor de la celda contiene la palabra hora
                 {
                     e.CellStyle.BackColor = Color.OrangeRed;
+                    e.CellStyle.ForeColor = Color.Black;
                 }
                 else if (e.Value.ToString().Contains("SQL no visible"))  //Si el valor de la celda contiene la palabra hora");
                 {
                     e.CellStyle.BackColor = Color.OrangeRed;
+                    e.CellStyle.ForeColor = Color.Black;
+                }
+                if (e.Value.ToString().Contains("Desactualizada"))   //Si el valor de la celda contiene la palabra hora
+                {
+                    e.CellStyle.BackColor = Color.Yellow;
+                    e.CellStyle.ForeColor = Color.Black;
                 }
             }
         }

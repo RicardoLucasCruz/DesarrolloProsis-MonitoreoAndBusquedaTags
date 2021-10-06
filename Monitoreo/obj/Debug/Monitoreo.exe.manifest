@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoreo.exe" size="548896">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Monitoreo.exe" size="552992">
       <assemblyIdentity name="Monitoreo" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>+TKgeKaG0QpnzZpGU+jGAtgUshmghyzFWuVTO6Dy/uU=</dsig:DigestValue>
+        <dsig:DigestValue>WBxfU0lBab5rjHthYeZg4FhZXIgHLZp/V43IzLDG+JU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -114,13 +114,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Monitoreo.exe.config" size="8245">
+  <file name="Monitoreo.exe.config" size="8286">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>9IaoLUpqpol01TMTBZBombysZQKBA7FiNAAIxvLUtQo=</dsig:DigestValue>
+      <dsig:DigestValue>PUV+GzzOAlf6POHmZ1lLwnfbaq90ajU7/YX3y6zI4Jk=</dsig:DigestValue>
     </hash>
   </file>
   <file name="monitoreo.ico" size="17531">
