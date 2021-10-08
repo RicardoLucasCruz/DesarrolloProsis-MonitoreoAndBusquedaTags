@@ -469,16 +469,6 @@ namespace Monitoreo
             btnAceptar2.ForeColor = Color.White;
             btnLimpiar2.ForeColor = Color.White;
         }
-
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            MessageBoxIcon icon = MessageBoxIcon.Warning;
-            MessageBoxButtons buttons = MessageBoxButtons.OK; ;
-            string message = "Favor de checar las LSTABINT, han pasado 30 minutos desde la ultima actualizacion";
-            string caption = "¡Alerta!";
-            MessageBox.Show(message, caption, buttons, icon);
-        }
-
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             contador++;
