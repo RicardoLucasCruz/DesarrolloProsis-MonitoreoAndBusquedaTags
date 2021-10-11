@@ -176,7 +176,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (TepozotlanLS.Contains("Sin conexion"))
+                if (TepozotlanLS.Contains("Sin conexion") || TepozotlanLS.Contains("No se encontro la ruta"))
                 {
                     TepozotlanTamaño = "Sin conexion con " + TPappSettings;
                 }
@@ -227,7 +227,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (JorobasLS.Contains("Sin conexion"))
+                if (JorobasLS.Contains("Sin conexion") || JorobasLS.Contains("No se encontro la ruta"))
                 {
                     JorobasTamaño = "Sin conexion con " + JOappSettings;
                 }
@@ -278,7 +278,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (PolotitlanLS.Contains("Sin conexion"))
+                if (PolotitlanLS.Contains("Sin conexion") || PolotitlanLS.Contains("No se encontro la ruta"))
                 {
                     PolotitlanTamaño = "Sin conexion con " + POappSettings;
                 }
@@ -329,7 +329,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (PalmillasLS.Contains("Sin conexion"))
+                if (PalmillasLS.Contains("Sin conexion") || PalmillasLS.Contains("No se encontro la ruta"))
                 {
                     PalmillasTamaño = "Sin conexion con " + PAappSettings;
                 }
@@ -380,7 +380,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (ChichemequillasLS.Contains("Sin conexion"))
+                if (ChichemequillasLS.Contains("Sin conexion") || ChichemequillasLS.Contains("No se encontro la ruta"))
                 {
                     ChichemequillasTamaño = "Sin conexion con " + CHIappSettings;
                 }
@@ -431,7 +431,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (QueretaroLS.Contains("Sin conexion"))
+                if (QueretaroLS.Contains("Sin conexion") || QueretaroLS.Contains("No se encontro la ruta"))
                 {
                     QueretaroTamaño = "Sin conexion con " + QappSettings;
                 }
@@ -482,7 +482,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (LibramientoLS.Contains("Sin conexion"))
+                if (LibramientoLS.Contains("Sin conexion") || LibramientoLS.Contains("No se encontro la ruta"))
                 {
                     LibramientoTamaño = "Sin conexion con " + LIBappSettings;
                 }
@@ -533,7 +533,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (VillaGrandLS.Contains("Sin conexion"))
+                if (VillaGrandLS.Contains("Sin conexion") || VillaGrandLS.Contains("No se encontro la ruta"))
                 {
                     VillaGrandTamaño = "Sin conexion con " + VGappSettings;
                 }
@@ -584,7 +584,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (CerroGordoLS.Contains("Sin conexion"))
+                if (CerroGordoLS.Contains("Sin conexion") || CerroGordoLS.Contains("No se encontro la ruta"))
                 {
                     CerroGordoTamaño = "Sin conexion con " + CGappSettings;
                 }
@@ -635,7 +635,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (SalamancaLS.Contains("Sin conexion"))
+                if (SalamancaLS.Contains("Sin conexion") || SalamancaLS.Contains("No se encontro la ruta"))
                 {
                     SalamancaTamaño = "Sin conexion con " + SAappSettings;
                 }
@@ -923,49 +923,56 @@ namespace Monitoreo
             }
             catch (Exception)
             {
-                DirectoryInfo directory2 = new DirectoryInfo($@"{IP}\PARAM\ACTUEL\");
-
-                if (Bandera == true)
+                try
                 {
-                    FileInfo[] fiArr = directory2.GetFiles();
+                    DirectoryInfo directory2 = new DirectoryInfo($@"{IP}\PARAM\ACTUEL\");
 
-                    foreach (FileInfo item in fiArr)
+                    if (Bandera == true)
                     {
-                        if (Nombre.Contains(item.Name))
+                        FileInfo[] fiArr = directory2.GetFiles();
+
+                        foreach (FileInfo item in fiArr)
                         {
-                            if (item.Length < 1048576)
+                            if (Nombre.Contains(item.Name))
                             {
-                                Variable = (item.Length / 1024).ToString("###0") + "KB";
-                            }
-                            else
-                            {
-                                VarNum = Convert.ToInt32((item.Length / 1024) / 1024);
-
-                                if (VarNum < 200)
+                                if (item.Length < 1048576)
                                 {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB" + System.Environment.NewLine + "Lista pequeña";
-
-                                    if (Bandera == true)
-                                    {
-                                        Metodos.InsertLog(IP, 600);
-                                        StatusSizeChange = true;
-                                    }
+                                    Variable = (item.Length / 1024).ToString("###0") + "KB";
                                 }
                                 else
                                 {
-                                    Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB";
+                                    VarNum = Convert.ToInt32((item.Length / 1024) / 1024);
 
-                                    if (Bandera == false)
+                                    if (VarNum < 200)
                                     {
-                                        Metodos.InsertLog(IP, 601);
-                                        StatusSizeChange = true;
+                                        Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB" + System.Environment.NewLine + "Lista pequeña";
+
+                                        if (Bandera == true)
+                                        {
+                                            Metodos.InsertLog(IP, 600);
+                                            StatusSizeChange = true;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        Variable = ((item.Length / 1024) / 1024).ToString("###0") + "MB";
+
+                                        if (Bandera == false)
+                                        {
+                                            Metodos.InsertLog(IP, 601);
+                                            StatusSizeChange = true;
+                                        }
                                     }
                                 }
                             }
                         }
                     }
                 }
-                throw;
+                catch (Exception ex)
+                {
+                    Logs.CrearArchivo(this, ex);
+                    throw;
+                }
             }
 
             return Variable;

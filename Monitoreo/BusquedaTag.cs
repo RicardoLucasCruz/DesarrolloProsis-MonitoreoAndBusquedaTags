@@ -224,7 +224,7 @@ namespace Monitoreo
         private void BusquedaTag_Load(object sender, EventArgs e)
         {
             panel2.Location = new Point(10, 400);
-
+  
             PaletaColores.ElegirTema("Defecto");
             tableLayoutPanel3.BackColor = PaletaColores.titulos;
             tableLayoutPanel5.BackColor = PaletaColores.titulos;

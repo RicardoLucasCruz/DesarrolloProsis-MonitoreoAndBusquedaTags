@@ -177,7 +177,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (AlpuyecaLS.Contains("Sin conexion"))
+                if (AlpuyecaLS.Contains("Sin conexion") || AlpuyecaLS.Contains("No se encontro la ruta"))
                 {
                     AlpuyecaTamaño = "Sin conexion con " + APappSettings;
                 }
@@ -228,7 +228,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (PasoMorelosLS.Contains("Sin conexion"))
+                if (PasoMorelosLS.Contains("Sin conexion") || PasoMorelosLS.Contains("No se encontro la ruta"))
                 {
                     PasoMorelosTamaño = "Sin conexion con " + PMappSettings;
                 }
@@ -279,7 +279,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (PoloBlancoLS.Contains("Sin conexion"))
+                if (PoloBlancoLS.Contains("Sin conexion") || PoloBlancoLS.Contains("No se encontro la ruta"))
                 {
                     PoloBlancoTamaño = "Sin conexion con " + PoBappSettings;
                 }
@@ -330,7 +330,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (LaVentaLS.Contains("Sin conexion"))
+                if (LaVentaLS.Contains("Sin conexion") || LaVentaLS.Contains("No se encontro la ruta"))
                 {
                     LaVentaTamaño = "Sin conexion con " + LaVappSettings;
                 }
@@ -381,7 +381,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (XochitepecLS.Contains("Sin conexion"))
+                if (XochitepecLS.Contains("Sin conexion") || XochitepecLS.Contains("No se encontro la ruta"))
                 {
                     XochitepecTamaño = "Sin conexion con " + XoappSettings;
                 }
@@ -432,7 +432,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (AeropuertoLS.Contains("Sin conexion"))
+                if (AeropuertoLS.Contains("Sin conexion") || AeropuertoLS.Contains("No se encontro la ruta"))
                 {
                     AeropuertoTamaño = "Sin conexion con " + AeappSettings;
                 }
@@ -483,7 +483,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (EmilianoZapataLS.Contains("Sin conexion"))
+                if (EmilianoZapataLS.Contains("Sin conexion") || EmilianoZapataLS.Contains("No se encontro la ruta"))
                 {
                     EmilianoZapataTamaño = "Sin conexion con " + EmZappSettings;
                 }
@@ -534,7 +534,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (TlalpanLS.Contains("Sin conexion"))
+                if (TlalpanLS.Contains("Sin conexion") || TlalpanLS.Contains("No se encontro la ruta"))
                 {
                     TlalpanTamaño = "Sin conexion con " + TpappSettings;
                 }
@@ -585,7 +585,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (TresMariasLS.Contains("Sin conexion"))
+                if (TresMariasLS.Contains("Sin conexion") || TresMariasLS.Contains("No se encontro la ruta"))
                 {
                     TresMariasTamaño = "Sin conexion con " + TMappSettings;
                 }
@@ -636,7 +636,7 @@ namespace Monitoreo
                     StatusLSTABINTChange = false;
                 }
 
-                if (FranciscoVelazcoLS.Contains("Sin conexion"))
+                if (FranciscoVelazcoLS.Contains("Sin conexion") || FranciscoVelazcoLS.Contains("No se encontro la ruta"))
                 {
                     FranciscoVelazcoTamaño = "Sin conexion con " + FVappSettings;
                 }
