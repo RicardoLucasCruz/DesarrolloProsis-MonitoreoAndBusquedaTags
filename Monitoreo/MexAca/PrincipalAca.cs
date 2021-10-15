@@ -652,8 +652,8 @@ namespace Monitoreo
                 }
                 //FranciscoVelazco WS
                 var SA79 = ConfigurationManager.AppSettings["FrV_IP_79"];
-                var name = ConfigurationManager.AppSettings["FrV_IP_79"];
-                var conn = ConfigurationManager.ConnectionStrings["FranciscoVelazcoNom"];
+                var name = ConfigurationManager.AppSettings["FranciscoVelazcoNom"];
+                var conn = ConfigurationManager.ConnectionStrings["FranciscoVelazcoW"];
                 Ult_WS_FrV = UltimasTransaccionesWS(SA79, Convert.ToString(conn), B_FrV_WS, B_WS_FrV_WS, name);
 
                 if (StatusConectionChange == true)
